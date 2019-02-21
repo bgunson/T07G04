@@ -1,8 +1,8 @@
 import java.util.*;
 public class twoDimensionalGrid 
 {
-	private int rows = 10;
-	private int columns = 10;
+	private final int rows = 10;
+	private final int columns = 10;
 	public String[][] grid = new String[columns][rows];
 
 	/*
@@ -20,15 +20,26 @@ public class twoDimensionalGrid
 	 */
 	public void gridDisplay()
 	{
-		
-		for(int i = 0; i<columns; i++)
+        char columnLabel = 65; //Adds the column label from A to J
+        for(int i = 0; i < columns; i++)
+        {
+            System.out.print("   ");
+            System.out.print(columnLabel + "");
+            columnLabel++;
+        }
+        System.out.println();
+
+        int rowLabel = 0; //Adds the row label from 0 to 9
+		for(int i = 0; i < columns; i++)
 		{
-			for(int j = 0; j<rows; j++)
+            System.out.print(rowLabel + "  ");
+			for(int j = 0; j< rows; j++)
 			{
 				System.out.print(grid[j][i]);
-				System.out.print(" ");
+                System.out.print("   ");
 			}
-			System.out.println();
+            System.out.println();
+            rowLabel++;
 		}
 	}
 	
