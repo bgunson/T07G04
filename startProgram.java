@@ -19,7 +19,7 @@ public class startProgram {
 
 		for (Ship ships : shipList){
 			testBoard.gridDisplay();
-			testBoard.promptToPlaceShip(ships, shipList.indexOf(ships));
+			testBoard.promptToPlaceShip(ships, shipList.indexOf(ships) + 1);
 			System.out.println("");
 
 		}
