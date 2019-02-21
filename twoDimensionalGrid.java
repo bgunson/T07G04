@@ -1,8 +1,8 @@
 import java.util.*;
-public class twoDimensionalGrid 
+public class twoDimensionalGrid
 {
-	private final int rows = 10;
-	private final int columns = 10;
+	private int rows = 10;
+	private int columns = 10;
 	public String[][] grid = new String[columns][rows];
 
 	/*
@@ -20,26 +20,15 @@ public class twoDimensionalGrid
 	 */
 	public void gridDisplay()
 	{
-        char columnLabel = 65; //Adds the column label from A to J
-        for(int i = 0; i < columns; i++)
-        {
-            System.out.print("   ");
-            System.out.print(columnLabel + "");
-            columnLabel++;
-        }
-        System.out.println();
-
-        int rowLabel = 0; //Adds the row label from 0 to 9
-		for(int i = 0; i < columns; i++)
+		
+		for(int i = 0; i<columns; i++)
 		{
-            System.out.print(rowLabel + "  ");
-			for(int j = 0; j< rows; j++)
+			for(int j = 0; j<rows; j++)
 			{
 				System.out.print(grid[j][i]);
-                System.out.print("   ");
+				System.out.print(" ");
 			}
-            System.out.println();
-            rowLabel++;
+			System.out.println();
 		}
 	}
 	
@@ -49,11 +38,12 @@ public class twoDimensionalGrid
 	params x and y are the top left x and y position of ship
 	paras width, height are width and height of ship
 	*/
-	public void placeShip(int x, int y, int width, int height){
+	public boolean placeShip(int x, int y, int width, int height){
 		
 		// if placing out of grid
 		if (( x + width > columns) || (y + height > rows)){ 
-			System.out.println("invalid placement");
+			// Bad placement.
+			return false;
 		}
 		else{
 			// check on if ship already exists in spot
@@ -61,11 +51,12 @@ public class twoDimensionalGrid
 			for(int i = x; i < (x+width); i++){
 				for(int j = y; j < (y+height); j++){
 					if (grid[i][j] != "O"){
-						System.out.println("invalid placement");
 						spaceAvailable = false;
+						return false;
 					}
 				}
 			}
+
 			
 			// places the shpi in spot
 			if (spaceAvailable){
@@ -74,7 +65,67 @@ public class twoDimensionalGrid
 						grid[i][j] = "X";
 					}
 				}
+				// Good placemnet.
+				return true;
 			}
+		}
+		return false;
+	}
+
+
+	/**
+	 * This method prompts the user to place a ship either vertically or horizontally at a specified keyboard
+	 * location on the game grid.
+	 * @param shipToPlace, the ship object of the particular ship being placed when called.
+	 *
+	 *                     To Do:
+	 *                     		- Add loop check for correct keyboard input for both vert/horz and coord selection.
+	 */
+	public void promptToPlaceShip(Ship shipToPlace, int shipNumber){
+
+
+		System.out.println("Choosing location for ship " + shipNumber + "...");
+		System.out.println("Ship " + shipNumber + " specifications: ");
+		System.out.println("L = " + shipToPlace.getShipLength() + " W = " + shipToPlace.getShipWidth());
+		System.out.println("Horizontal [1] or Vertical [2] ?");
+		Scanner keyboard = new Scanner(System.in);
+		int orientation = keyboard.nextInt();
+
+
+		boolean goodPlace = false;
+		// If vertical place ship (L, W).
+
+		while (goodPlace == false){
+			System.out.println("Enter the coordinates of the top left corner of the ship. Eg: a 4");
+			Scanner selection = new Scanner(System.in);
+			char xChar = selection.next().charAt(0);
+			xChar -= 97;
+			int x = (int)(xChar);
+			int y = selection.nextInt();
+
+			boolean wasGoodPlace = false;
+
+			// If wanted vertical place ship (x, y, L, W).
+			if (orientation == 1){
+				wasGoodPlace = placeShip(x, y, shipToPlace.getShipLength(), shipToPlace.getShipWidth());
+			}
+			// Else vertical, place  ship (x, y, W, L).
+			else{
+				wasGoodPlace = placeShip(x, y, shipToPlace.getShipWidth(), shipToPlace.getShipLength());
+			}
+
+			// Check wasGoodPlace condition.
+			if (wasGoodPlace == goodPlace){
+				System.out.println("Sorry, that was not a valid placement. Try Again.");
+				System.out.println("");
+			}
+
+			else{
+				goodPlace = true;
+			}
+
+
+
 		}
 	}
 }
