@@ -91,9 +91,7 @@ public class twoDimensionalGrid
 		Scanner keyboard = new Scanner(System.in);
 		int orientation = keyboard.nextInt();
 
-
 		boolean goodPlace = false;
-		// If vertical place ship (L, W).
 
 		while (goodPlace == false){
 			System.out.println("Enter the coordinates of the top left corner of the ship. Eg: a 4");
