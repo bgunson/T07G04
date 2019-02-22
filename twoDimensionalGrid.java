@@ -77,6 +77,7 @@ public class twoDimensionalGrid
 	 * This method prompts the user to place a ship either vertically or horizontally at a specified keyboard
 	 * location on the game grid.
 	 * @param shipToPlace, the ship object of the particular ship being placed when called.
+	 * @param shipNumber, the index + 1 of the ship thats being passed to differentiate each ship.
 	 *
 	 *                     To Do:
 	 *                     		- Add loop check for correct keyboard input for both vert/horz and coord selection.
