@@ -20,6 +20,15 @@ public class Ship{
         this.shipLength = shipLength;
 
     }
+    
+    /**
+    * Copy constructor.
+    */
+    public Ship(Ship shipToCopy){
+        this.shipLength = shipToCopy.getShipLength();
+        this.shipWidth = 1;
+        this.numberofHits = 0;
+    }
 
     /**
      * Method that returns length of the ship.
