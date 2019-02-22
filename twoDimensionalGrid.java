@@ -127,7 +127,6 @@ public class twoDimensionalGrid
 
 
 		}
-		// Some fancy whitespace
-		System.out.println("");
+	
 	}
 }
