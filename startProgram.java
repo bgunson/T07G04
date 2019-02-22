@@ -8,9 +8,9 @@ public class startProgram {
 		twoDimensionalGrid testBoard = new twoDimensionalGrid();
 		testBoard.gridBuilder();
 
-		Ship largeShip = new Ship(4, 1);
-		Ship mediumShip = new Ship(3, 1);
-		Ship smallShip = new Ship(2, 1);
+		Ship largeShip = new Ship(4);
+		Ship mediumShip = new Ship(3);
+		Ship smallShip = new Ship(2);
 
 		ArrayList<Ship> shipList = new ArrayList<Ship>();
 		shipList.add(largeShip);
