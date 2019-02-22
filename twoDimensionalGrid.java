@@ -20,9 +20,10 @@ public class twoDimensionalGrid
 	 */
 	public void gridDisplay()
 	{
-		
+		System.out.println("  A B C D E F G H I J");
 		for(int i = 0; i<columns; i++)
 		{
+			System.out.print(i+" ");
 			for(int j = 0; j<rows; j++)
 			{
 				System.out.print(grid[j][i]);
