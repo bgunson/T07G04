@@ -27,7 +27,7 @@ public class Ship{
     public Ship(Ship shipToCopy){
         this.shipLength = shipToCopy.getShipLength();
         this.shipWidth = 1;
-        this.numberofHits = 0;
+        this.numberOfHits = 0;
     }
 
     /**
