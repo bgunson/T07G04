@@ -7,7 +7,7 @@ tell us if it is destroyed or not at any certain point in the game.
 public class Ship{
 
     private int shipLength;
-    private int shipWidth;
+    private int shipWidth = 1;
     private int numberOfHits = 0;
 
     /**
@@ -15,10 +15,9 @@ public class Ship{
      * @param shipLength the length of the ship.
      * @param shipWidth the width of the ship.
      */
-    public Ship(int shipLength, int shipWidth){
+    public Ship(int shipLength){
 
         this.shipLength = shipLength;
-        this.shipWidth = shipWidth;
 
     }
 
