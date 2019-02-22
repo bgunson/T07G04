@@ -2,7 +2,7 @@
 Group Project
 
 SHIPS:
-  1 x 5 long
-  1 x 4 long 
-  2 x 3 long
-  1 x 2 long
+  1: 5 long;
+  1: 4 long; 
+  2: 3 long;
+  1: 2 long;
