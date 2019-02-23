@@ -130,4 +130,23 @@ public class twoDimensionalGrid
 	
 	}
 
+	/**
+	 * shotFired takes an x,y position on the given grid (opponent) and checks if the shot was ahit or miss and
+	 * changes the value at the given position based on what the outcome is.
+	 * @param x, the x pos of the shot.
+	 * @param y, the y pos of the shot.
+	 * @return, true if the shot was a hit, false if not.
+	 */
+	public boolean shotFired(int x, int y){
+		if (grid[x][y] == "X"){
+			grid[x][y] = "H";
+			return true;
+		}
+
+		else if (grid[x][y] == "O"){
+			grid[x][y] = "M";
+		}
+		return false;
+	}
+
 }

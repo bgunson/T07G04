@@ -17,9 +17,31 @@ public class startProgram {
 		// Prompt player one to select locations for all their ships
 		playerOneShips.placeAllShips(playerOneGrid);
 
-		playerOneGrid.gridDisplay();
+		// Main game loop, one player game shooting at your own board.
+		while (playerOneShips.isEveryShipDestroyed() == false){
+			System.out.println("");
+			playerOneGrid.gridDisplay();
+			System.out.println("Choose an (x,y) for your next shot: ");
+			// Needs to check if input is an actual coord on the grid.
+			Scanner selection = new Scanner(System.in);
+			char xChar = selection.next().charAt(0);
+			xChar -= 97;
+			int x = (int)(xChar);
+			int y = selection.nextInt();
 
-		// Now repeat for computer(auto place)/player 2 and start game.
+			boolean shot = playerOneGrid.shotFired(x, y);
+			if (shot == true){
+				System.out.println("Good Hit!");
+				playerOneShips.goodHit();
+			}
+			else{
+				System.out.println("Miss!");
+			}
+
+
+
+		}
+		System.out.println("GAME OVER!");
 
 
 

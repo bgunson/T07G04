@@ -4,6 +4,7 @@ public class ShipTeam{
 
     private ArrayList<Ship> shipFleet = new ArrayList<Ship>();
     private String name;
+    int amountHit = 0;
 
     /**
      * Constructs a ship team with a given name for the fleet. Then adds the 5 default ships with names according
@@ -12,7 +13,7 @@ public class ShipTeam{
      */
     public ShipTeam(String name){
         this.name = name;
-        // Add default ships with name <shipName (player_fleet_name)>
+        // Add default ships with name <shipName (player fleet name)>
         shipFleet.add(new Ship(5, "Spacestation (" + this.name + ")"));
         shipFleet.add(new Ship(4, "BattleShip (" + this.name + ")"));
         shipFleet.add(new Ship(3, "Cruiser (" + this.name + ")"));
@@ -29,6 +30,7 @@ public class ShipTeam{
         for (Ship someShip : shipFleet){
             grid.gridDisplay();
             grid.promptToPlaceShip(someShip, someShip.getShipName());
+            System.out.println("");
         }
     }
 
@@ -40,20 +42,21 @@ public class ShipTeam{
         return name;
     }
 
+    public void goodHit(){
+        this.amountHit += 1;
+    }
+
     /**
      * Checks all the ships in a players fleet to see if they all have been destroyed to be used as a
      * condition for a main game loop.
      * @return true if all ships in fleet are destoyed, false otherwise.
      */
     public boolean isEveryShipDestroyed(){
-
-        int amountDestoyed = 0;
-
+        int totalHitsAllowed = 0;
         for (Ship s : shipFleet){
-            if (s.isDestroyed() == true)
-                amountDestoyed += 1;
+            totalHitsAllowed += s.getShipLength();
         }
-        if (amountDestoyed == shipFleet.size())
+        if (totalHitsAllowed == amountHit)
             return true;
         else
             return false;
