@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 
-
 public class ShipTeam{
 
     private ArrayList<Ship> shipFleet = new ArrayList<Ship>();
