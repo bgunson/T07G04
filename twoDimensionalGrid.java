@@ -87,8 +87,8 @@ public class twoDimensionalGrid
 
 
 		System.out.println("Choosing location for ship " + shipName + "...");
-		System.out.println("Ship " + shipName + " specifications: ");
-		System.out.println("L = " + shipToPlace.getShipLength() + " W = " + shipToPlace.getShipWidth());
+		System.out.println(shipName + " specifications: ");
+		System.out.println("LENGTH = " + shipToPlace.getShipLength() + " WIDTH = " + shipToPlace.getShipWidth());
 		System.out.println("Horizontal [1] or Vertical [2] ?");
 		Scanner keyboard = new Scanner(System.in);
 		int orientation = keyboard.nextInt();
