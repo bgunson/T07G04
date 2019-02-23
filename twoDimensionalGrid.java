@@ -84,7 +84,7 @@ public class twoDimensionalGrid
 	 *                     		- Add loop check for correct keyboard input for both vert/horz and coord selection.
 	 */
 	public void promptToPlaceShip(Ship shipToPlace, String shipName){
-
+		//test
 
 		System.out.println("Choosing location for the " + shipName + "...");
 		System.out.println(shipName + " specifications: ");
