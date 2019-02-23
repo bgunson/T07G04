@@ -83,11 +83,11 @@ public class twoDimensionalGrid
 	 *                     To Do:
 	 *                     		- Add loop check for correct keyboard input for both vert/horz and coord selection.
 	 */
-	public void promptToPlaceShip(Ship shipToPlace, int shipNumber){
+	public void promptToPlaceShip(Ship shipToPlace, String shipName){
 
 
-		System.out.println("Choosing location for ship " + shipNumber + "...");
-		System.out.println("Ship " + shipNumber + " specifications: ");
+		System.out.println("Choosing location for ship " + shipName + "...");
+		System.out.println("Ship " + shipName + " specifications: ");
 		System.out.println("L = " + shipToPlace.getShipLength() + " W = " + shipToPlace.getShipWidth());
 		System.out.println("Horizontal [1] or Vertical [2] ?");
 		Scanner keyboard = new Scanner(System.in);
@@ -129,4 +129,5 @@ public class twoDimensionalGrid
 		}
 	
 	}
+
 }

@@ -2,29 +2,27 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 public class startProgram {
-	public static void main(String[] args) {
-		
-		//Runs the other class to build and display the 2d array
-		twoDimensionalGrid testBoard = new twoDimensionalGrid();
-		testBoard.gridBuilder();
 
-		Ship largeShip = new Ship(4);
-		Ship mediumShip = new Ship(3);
-		Ship smallShip = new Ship(2);
+	public static void main(String[] args){
 
-		ArrayList<Ship> shipList = new ArrayList<Ship>();
-		shipList.add(largeShip);
-		shipList.add(mediumShip);
-		shipList.add(smallShip);
+		System.out.println("Welcome to BattleShip Galactica!");
 
-		for (Ship ships : shipList){
-			testBoard.gridDisplay();
-			testBoard.promptToPlaceShip(ships, shipList.indexOf(ships) + 1);
+		// Create game board for player 1.
+		twoDimensionalGrid playerOneGrid = new twoDimensionalGrid();
+		playerOneGrid.gridBuilder();
 
-		}
-		System.out.println("Ending test board: ");
-		testBoard.gridDisplay();
-		
-		
+		// Create ship fleet for player 1.
+		ShipTeam playerOneShips = new ShipTeam("Player One Fleet");
+
+		// Prompt player one to select locations for all their ships
+		playerOneShips.placeAllShips(playerOneGrid);
+
+		playerOneGrid.gridDisplay();
+
+		// Now repeat for computer(auto place)/player 2 and start game.
+
+
+
 	}
+
 }

@@ -9,15 +9,18 @@ public class Ship{
     private int shipLength;
     private int shipWidth = 1;
     private int numberOfHits = 0;
+    private String shipName;
+
 
     /**
      * Constructor with length and width arguments.
      * @param shipLength the length of the ship.
      * @param shipWidth the width of the ship.
      */
-    public Ship(int shipLength){
+    public Ship(int shipLength, String shipName){
 
         this.shipLength = shipLength;
+        this.shipName = shipName;
 
     }
     
@@ -26,8 +29,13 @@ public class Ship{
     */
     public Ship(Ship shipToCopy){
         this.shipLength = shipToCopy.getShipLength();
+        this.shipName = shipToCopy.getShipName();
         this.shipWidth = 1;
         this.numberOfHits = 0;
+    }
+
+    public String getShipName(){
+        return this.shipName;
     }
 
     /**
@@ -67,6 +75,7 @@ public class Ship{
      * checks if the ship has been hit the same amount that it is long.
      * @return true if the ship has been destroyed, false otherwise.
      */
+
     public boolean isDestroyed(){
         if (numberOfHits == shipLength){
             return true;
