@@ -86,7 +86,7 @@ public class twoDimensionalGrid
 	public void promptToPlaceShip(Ship shipToPlace, String shipName){
 
 
-		System.out.println("Choosing location for ship " + shipName + "...");
+		System.out.println("Choosing location for the " + shipName + "...");
 		System.out.println(shipName + " specifications: ");
 		System.out.println("LENGTH = " + shipToPlace.getShipLength() + " WIDTH = " + shipToPlace.getShipWidth());
 		System.out.println("Horizontal [1] or Vertical [2] ?");
