@@ -5,6 +5,11 @@ public class ShipTeam{
     private ArrayList<Ship> shipFleet = new ArrayList<Ship>();
     private String name;
 
+    /**
+     * Constructs a ship team with a given name for the fleet. Then adds the 5 default ships with names according
+     * to the player that the fleet belongs to.
+     * @param name, the string tha the fleet is to be named when constructed.
+     */
     public ShipTeam(String name){
         this.name = name;
         // Add default ships with name <shipName (player_fleet_name)>
@@ -16,6 +21,10 @@ public class ShipTeam{
 
     }
 
+    /**
+     * Iterates through each ship in the fleet and promts human player to choose location for the specifeid ship.
+     * @param grid, the game board for the players grid.
+     */
     public void placeAllShips(twoDimensionalGrid grid){
         for (Ship someShip : shipFleet){
             grid.gridDisplay();
@@ -29,5 +38,24 @@ public class ShipTeam{
 
     public String getName() {
         return name;
+    }
+
+    /**
+     * Checks all the ships in a players fleet to see if they all have been destroyed to be used as a
+     * condition for a main game loop.
+     * @return true if all ships in fleet are destoyed, false otherwise.
+     */
+    public boolean isEveryShipDestroyed(){
+
+        int amountDestoyed = 0;
+
+        for (Ship s : shipFleet){
+            if (s.isDestroyed() == true)
+                amountDestoyed += 1;
+        }
+        if (amountDestoyed == shipFleet.size())
+            return true;
+        else
+            return false;
     }
 }
