@@ -10,6 +10,7 @@ As it stands our game is one player. After placing your ships you will be promte
 To run the game compile and execute the files in the src folder:
 
   javac *.java
+  
   java StartProgram
 
 Note: The keyboard input does not have error checking for correctly ranged input nor format of the input.
