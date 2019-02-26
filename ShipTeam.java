@@ -26,7 +26,7 @@ public class ShipTeam{
      * Iterates through each ship in the fleet and promts human player to choose location for the specifeid ship.
      * @param grid, the game board for the players grid.
      */
-    public void placeAllShips(twoDimensionalGrid grid){
+    public void placeAllShips(TwoDimensionalGrid grid){
         for (Ship someShip : shipFleet){
             grid.gridDisplay();
             grid.promptToPlaceShip(someShip, someShip.getShipName());

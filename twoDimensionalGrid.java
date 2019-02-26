@@ -1,5 +1,5 @@
 import java.util.*;
-public class twoDimensionalGrid
+public class TwoDimensionalGrid
 {
 	private int rows = 10;
 	private int columns = 10;

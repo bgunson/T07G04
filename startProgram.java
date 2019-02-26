@@ -1,14 +1,14 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class startProgram {
+public class StartProgram {
 
 	public static void main(String[] args){
 
 		System.out.println("Welcome to BattleShip Galactica!");
 
 		// Create game board for player 1.
-		twoDimensionalGrid playerOneGrid = new twoDimensionalGrid();
+		TwoDimensionalGrid playerOneGrid = new TwoDimensionalGrid();
 		playerOneGrid.gridBuilder();
 		// Create ship fleet for player 1.
 		ShipTeam playerOneShips = new ShipTeam("Player One Fleet");
