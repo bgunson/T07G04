@@ -1,8 +1,8 @@
 import java.util.*;
-public class TwoDimensionalGrid
+public class twoDimensionalGrid
 {
-	private final int rows = 10;
-	private final int columns = 10;
+	private int rows = 10;
+	private int columns = 10;
 	public String[][] grid = new String[columns][rows];
 
 	/*
@@ -122,11 +122,7 @@ public class TwoDimensionalGrid
 			else{
 				goodPlace = true;
 			}
-
-
-
 		}
-	
 	}
 
 	/**
@@ -138,14 +134,16 @@ public class TwoDimensionalGrid
 	 */
 	public boolean shotFired(int x, int y){
 		if (grid[x][y] == "X"){
-			grid[x][y] = "H";
 			return true;
 		}
-
-		else if (grid[x][y] == "O"){
-			grid[x][y] = "M";
-		}
 		return false;
+	}
+	
+	public void placeShot(boolean hit, int x, int y){
+		if (hit == true)
+			grid[x][y] = "H";
+		else
+			grid[x][y] = "M";
 	}
 
 }
