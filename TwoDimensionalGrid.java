@@ -1,8 +1,8 @@
 import java.util.*;
 public class TwoDimensionalGrid
 {
-	private int rows = 10;
-	private int columns = 10;
+	private final int rows = 10;
+	private final int columns = 10;
 	public String[][] grid = new String[columns][rows];
 
 	/*
