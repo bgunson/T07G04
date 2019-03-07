@@ -1,5 +1,4 @@
 public class AiPlayer{
-
     /**
      * Places starting ships.
      */

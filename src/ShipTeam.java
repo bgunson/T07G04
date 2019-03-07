@@ -2,9 +2,9 @@ import java.util.ArrayList;
 
 public class ShipTeam{
 
-    private ArrayList<Ship> shipFleet = new ArrayList<Ship>();
+    private ArrayList<Ship> shipFleet;
     private String name;
-    int amountHit = 0;
+    int amountHit;
 
     /**
      * Constructs a ship team with a given name for the fleet. Then adds the 5 default ships with names according
@@ -12,7 +12,10 @@ public class ShipTeam{
      * @param name, the string tha the fleet is to be named when constructed.
      */
     public ShipTeam(String name){
+
         this.name = name;
+        amountHit = 0;
+        shipFleet = new ArrayList<Ship>();
         // Add default ships with name <shipName (player fleet name)>
         shipFleet.add(new Ship(5, "Spacestation (" + this.name + ")"));
         shipFleet.add(new Ship(4, "BattleShip (" + this.name + ")"));
