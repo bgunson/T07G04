@@ -8,14 +8,14 @@ public class Game {
 		System.out.println("Welcome to BattleShip Galactica!");
 
 		// Create game board for player 1.
-		TwoDimensionalGrid playerOneShips = new TwoDimensionalGrid();
+		Board playerOneShips = new Board();
 		playerOneShips.gridBuilder();
-		TwoDimensionalGrid playerOneHits = new TwoDimensionalGrid();
+		Board playerOneHits = new Board();
 		playerOneHits.gridBuilder();
 
-		TwoDimensionalGrid playerTwoShips = new TwoDimensionalGrid();
+		Board playerTwoShips = new Board();
 		playerTwoShips.gridBuilder();
-		TwoDimensionalGrid playerTwoHits = new TwoDimensionalGrid();
+		Board playerTwoHits = new Board();
 		playerTwoHits.gridBuilder();		
 
 		System.out.println("Player 1 place ships");
@@ -43,7 +43,7 @@ public class Game {
 		}
 	}
 
-	public static void playTurn(TwoDimensionalGrid playerShips, TwoDimensionalGrid playerHits, TwoDimensionalGrid enemyShips){
+	public static void playTurn(Board playerShips, Board playerHits, Board enemyShips){
 			
 		System.out.println("Your Ships");
 		playerShips.gridDisplay();
