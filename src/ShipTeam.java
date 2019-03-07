@@ -17,11 +17,11 @@ public class ShipTeam{
         amountHit = 0;
         shipFleet = new ArrayList<Ship>();
         // Add default ships with name <shipName (player fleet name)>
-        shipFleet.add(new Ship(5, "Spacestation (" + this.name + ")"));
-        shipFleet.add(new Ship(4, "BattleShip (" + this.name + ")"));
-        //shipFleet.add(new Ship(3, "Cruiser (" + this.name + ")"));
-        shipFleet.add(new Ship(3, "Destroyer (" + this.name + ")"));
-        //shipFleet.add(new Ship(2, "Satellite (" + this.name + ")"));
+        shipFleet.add(new Ship(5, "Spacestation"));
+        shipFleet.add(new Ship(4, "BattleShip"));
+        //shipFleet.add(new Ship(3, "Cruiser"));
+        shipFleet.add(new Ship(3, "Destroyer"));
+        //shipFleet.add(new Ship(2, "Satellite"));
 
     }
 
