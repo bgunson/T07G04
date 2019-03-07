@@ -1,5 +1,7 @@
 Board:
 
+public String[][] grid = new String[columns][rows]; --> keep this to simplify things
+
 BoardBuilder()
 *drawBoard(ShipTeam)
 *drawHits(ShipTeam)
