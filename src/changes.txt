@@ -1,0 +1,41 @@
+Board:
+
+BoardBuilder()
+*drawBoard(ShipTeam)
+*drawHits(ShipTeam)
+
+
+Ship:
+
+int shipWidth
+*boolean destroyed
+
+*array<String> coordinates = ("A1", "A1", "A1", "A1")
+*array<String> destroyed = ("D", "D", "", "")
+
+*isDestroyed()
+*checkHit( xy )
+	for string A in coordinates
+		if xy == A...
+
+
+ShipTeam:
+
+private ArrayList<Ship> shipFleet = new ArrayList<Ship>();
+
+placeAllShips(Board)
+*isEveryShipDestroyed()
+	for ship in shipFleet
+		ship.isDestroyed()...
+*checkHit()
+	for Ship in shipFleet
+		 ship.checkHit( xy )
+	return true/false
+
+Game:
+
+...
+*shotInput( xy )
+	boolean hit = shipTeam.shotFired( xy )
+	if hit = false
+		hits += "xy"
