@@ -80,9 +80,6 @@ public class Board
 	 * location on the game grid.
 	 * @param shipToPlace, the ship object of the particular ship being placed when called.
 	 * @param shipNumber, the index + 1 of the ship thats being passed to differentiate each ship.
-	 *
-	 *                     To Do:
-	 *                     		- Add loop check for correct keyboard input for both vert/horz and coord selection.
 	 */
 	public void promptToPlaceShip(Ship shipToPlace, String shipName){
 
