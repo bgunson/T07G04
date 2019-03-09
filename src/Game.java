@@ -9,14 +9,14 @@ public class Game {
 
 		// Create game board for player 1.
 		Board playerOneShips = new Board();
-		playerOneShips.gridBuilder();
+		//playerOneShips.gridBuilder();
 		Board playerOneHits = new Board();
-		playerOneHits.gridBuilder();
+		//playerOneHits.gridBuilder();
 
 		Board playerTwoShips = new Board();
-		playerTwoShips.gridBuilder();
+		//playerTwoShips.gridBuilder();
 		Board playerTwoHits = new Board();
-		playerTwoHits.gridBuilder();		
+		//playerTwoHits.gridBuilder();		
 
 		System.out.println("Player 1 place ships");
 		ShipTeam playerOneFleet = new ShipTeam("Player One Fleet");
@@ -46,9 +46,9 @@ public class Game {
 	public static void playTurn(Board playerShips, Board playerHits, Board enemyShips){
 			
 		System.out.println("Your Ships");
-		playerShips.gridDisplay();
+		playerShips.boardDisplay();
 		System.out.println("Hit/Misses");
-		playerHits.gridDisplay();
+		playerHits.boardDisplay();
 	
 		System.out.println("Choose an (x,y) for your next shot: ");
 		// Needs to check if input is an actual coord on the grid.
