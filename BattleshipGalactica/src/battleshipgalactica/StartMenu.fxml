@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="800.0" styleClass="backgroundImg" stylesheets="@MainBoardStyle.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="battleshipgalactica.StartMenuController">
+   <children>
+      <VBox alignment="CENTER" layoutX="367.0" layoutY="332.0" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Button fx:id="startButton" mnemonicParsing="false" onAction="#openMainBoard" text="Start Game">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exitGame" text="Exit Game" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
