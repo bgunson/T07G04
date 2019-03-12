@@ -1,9 +1,14 @@
 import java.util.ArrayList;
 
 public class ShipTeam{
-
-    private ArrayList<Ship> shipFleet;
+	
+	private ArrayList<Ship> shipFleet;
 	private String name;
+	
+public ArrayList<Ship> getShipFleet() {
+        return shipFleet;
+    }
+
 	
     /**
      * Constructs a ship team with a given name for the fleet. Then adds the 5 default ships with names according
