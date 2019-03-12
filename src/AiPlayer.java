@@ -11,7 +11,6 @@ public class AiPlayer{
 
         int randomX, randomY;
         for (Ship s : theShips){
-            System.out.println(s.name);
             boolean goodPlace = false;
             while (goodPlace == false){
                 Random rand = new Random();
