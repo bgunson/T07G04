@@ -270,11 +270,32 @@ public class MainBoardController {
     @FXML
     private void ClickButton(ActionEvent event) {
     if(shipCounter < 17)
-    {
+    {   
+        if(PlayerPane.getRowIndex((Button)event.getSource()) == null && PlayerPane.getColumnIndex((Button)event.getSource()) == null)
+        {
+            PlayerPane.setRowIndex((Button)event.getSource(), 0);
+            PlayerPane.setColumnIndex((Button)event.getSource(), 0);
+        }
+        else if(PlayerPane.getRowIndex((Button)event.getSource()) == null)
+        {
+            PlayerPane.setRowIndex((Button)event.getSource(), 0);
+        }
+        else if(PlayerPane.getColumnIndex((Button)event.getSource()) == null)
+        {
+            PlayerPane.setColumnIndex((Button)event.getSource(), 0);
+        }
+        
+        int rowValue = PlayerPane.getRowIndex((Button)event.getSource());
+        int colValue = PlayerPane.getColumnIndex((Button)event.getSource());
+        
         Button currButton = (Button)event.getSource();
+        
+        int currRow = PlayerPane.getRowIndex(currButton);
+        int currColumn = PlayerPane.getColumnIndex(currButton);
         currButton.setStyle("-fx-background-color: #109856");
-        RowField.setText(String.valueOf(PlayerPane.getRowIndex((Button)event.getSource())));
-        ColumnField.setText(String.valueOf(PlayerPane.getColumnIndex((Button)event.getSource())));
+        
+        RowField.setText(String.valueOf(rowValue));
+        ColumnField.setText(String.valueOf(colValue));
         shipCounter++;
     }
     }
