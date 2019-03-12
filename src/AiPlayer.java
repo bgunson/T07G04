@@ -27,7 +27,7 @@ public class AiPlayer{
 				if (randomX % 2 == 0)
 					goodPlace = board.placeShip(randomX, randomY, s.getShipLength(), 1);
 				else
-					goodPlace = board.placeShip(randomX, randomY, s.getShipLength(), 2);
+					goodPlace = board.placeShip(randomX, randomY, 1, s.getShipLength());
 			}
 		}
 
