@@ -15,10 +15,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-/**
- *
- * @author Fabian Aryo Pradipto
- */
 public class StartMenuController {
 
     @FXML

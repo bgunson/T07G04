@@ -5,24 +5,29 @@
  */
 package battleshipgalactica;
 
+import java.awt.event.ActionListener;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.geometry.HPos;
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.SplitPane;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
-import javafx.scene.shape.Rectangle;
 import javafx.scene.paint.Color;
 
 /**
  *
  * @author Fabian Aryo Pradipto
  */
-public class MainBoardController {
+public class MainBoardController{
     private final int ROWS = 10;
     private final int COLUMNS =10;
     private int shipCounter = 0;
+    private Button[][] PlayerPaneButtons = new Button[ROWS][COLUMNS];
+    private Button[][] EnemyPaneButtons = new Button[ROWS][COLUMNS];
 
     @FXML
     private SplitPane SplitPane;
@@ -42,209 +47,11 @@ public class MainBoardController {
     @FXML
     private Button twoShipButton;
     @FXML
-    private Button JButton;
-    @FXML
     private TextField RowField;
     @FXML
     private TextField ColumnField;
     @FXML
-    private Button JButton1;
-    @FXML
-    private Button JButton2;
-    @FXML
-    private Button JButton3;
-    @FXML
-    private Button JButton4;
-    @FXML
-    private Button JButton5;
-    @FXML
-    private Button JButton6;
-    @FXML
-    private Button JButton7;
-    @FXML
-    private Button JButton8;
-    @FXML
-    private Button JButton9;
-    @FXML
-    private Button JButton11;
-    @FXML
-    private Button JButton12;
-    @FXML
-    private Button JButton13;
-    @FXML
-    private Button JButton14;
-    @FXML
-    private Button JButton15;
-    @FXML
-    private Button JButton16;
-    @FXML
-    private Button JButton17;
-    @FXML
-    private Button JButton18;
-    @FXML
-    private Button JButton19;
-    @FXML
-    private Button JButton20;
-    @FXML
-    private Button JButton22;
-    @FXML
-    private Button JButton23;
-    @FXML
-    private Button JButton24;
-    @FXML
-    private Button JButton25;
-    @FXML
-    private Button JButton26;
-    @FXML
-    private Button JButton27;
-    @FXML
-    private Button JButton28;
-    @FXML
-    private Button JButton29;
-    @FXML
-    private Button JButton30;
-    @FXML
-    private Button JButton31;
-    @FXML
-    private Button JButton33;
-    @FXML
-    private Button JButton34;
-    @FXML
-    private Button JButton35;
-    @FXML
-    private Button JButton36;
-    @FXML
-    private Button JButton37;
-    @FXML
-    private Button JButton38;
-    @FXML
-    private Button JButton39;
-    @FXML
-    private Button JButton40;
-    @FXML
-    private Button JButton41;
-    @FXML
-    private Button JButton42;
-    @FXML
-    private Button JButton44;
-    @FXML
-    private Button JButton45;
-    @FXML
-    private Button JButton46;
-    @FXML
-    private Button JButton47;
-    @FXML
-    private Button JButton48;
-    @FXML
-    private Button JButton49;
-    @FXML
-    private Button JButton50;
-    @FXML
-    private Button JButton51;
-    @FXML
-    private Button JButton52;
-    @FXML
-    private Button JButton53;
-    @FXML
-    private Button JButton55;
-    @FXML
-    private Button JButton56;
-    @FXML
-    private Button JButton57;
-    @FXML
-    private Button JButton58;
-    @FXML
-    private Button JButton59;
-    @FXML
-    private Button JButton60;
-    @FXML
-    private Button JButton61;
-    @FXML
-    private Button JButton62;
-    @FXML
-    private Button JButton63;
-    @FXML
-    private Button JButton64;
-    @FXML
-    private Button JButton66;
-    @FXML
-    private Button JButton67;
-    @FXML
-    private Button JButton68;
-    @FXML
-    private Button JButton69;
-    @FXML
-    private Button JButton70;
-    @FXML
-    private Button JButton71;
-    @FXML
-    private Button JButton72;
-    @FXML
-    private Button JButton73;
-    @FXML
-    private Button JButton74;
-    @FXML
-    private Button JButton75;
-    @FXML
-    private Button JButton77;
-    @FXML
-    private Button JButton78;
-    @FXML
-    private Button JButton79;
-    @FXML
-    private Button JButton80;
-    @FXML
-    private Button JButton81;
-    @FXML
-    private Button JButton82;
-    @FXML
-    private Button JButton83;
-    @FXML
-    private Button JButton84;
-    @FXML
-    private Button JButton85;
-    @FXML
-    private Button JButton86;
-    @FXML
-    private Button JButton88;
-    @FXML
-    private Button JButton10;
-    @FXML
-    private Button JButton21;
-    @FXML
-    private Button JButton32;
-    @FXML
-    private Button JButton43;
-    @FXML
-    private Button JButton54;
-    @FXML
-    private Button JButton65;
-    @FXML
-    private Button JButton76;
-    @FXML
-    private Button JButton87;
-    @FXML
-    private Button JButton89;
-    @FXML
-    private Button JButton90;
-    @FXML
-    private Button JButton91;
-    @FXML
-    private Button JButton92;
-    @FXML
-    private Button JButton93;
-    @FXML
-    private Button JButton94;
-    @FXML
-    private Button JButton95;
-    @FXML
-    private Button JButton96;
-    @FXML
-    private Button JButton97;
-    @FXML
-    private Button JButton98;
-    @FXML
-    private Button JButton99;
+    private Button startGameButton;
 
     @FXML
     private void placeShip5(ActionEvent event) {
@@ -266,38 +73,133 @@ public class MainBoardController {
     @FXML
     private void placeShip2(ActionEvent event) {
     }
-
-    @FXML
-    private void ClickButton(ActionEvent event) {
-    if(shipCounter < 17)
-    {   
-        if(PlayerPane.getRowIndex((Button)event.getSource()) == null && PlayerPane.getColumnIndex((Button)event.getSource()) == null)
+    
+    public void initialize() {
+        addButtonPlayerPane();
+        addButtonEnemyPane();
+    }
+    
+    /**
+     * Adds all 100 button to PlayerPane
+     */
+    public void addButtonPlayerPane()
+    {
+        for(int i = 0; i < ROWS; i++)
         {
-            PlayerPane.setRowIndex((Button)event.getSource(), 0);
-            PlayerPane.setColumnIndex((Button)event.getSource(), 0);
+            for(int j = 0; j < COLUMNS; j++)
+            {
+                PlayerPaneButtons[i][j] = new Button();
+                PlayerPaneButtons[i][j].setPrefSize(39,39);
+                PlayerPaneButtons[i][j].setMinSize(39,39);
+                PlayerPaneButtons[i][j].setMaxSize(39,39);
+                PlayerPaneButtons[i][j].setStyle("-fx-background-color: #000000");
+                PlayerPane.add(PlayerPaneButtons[i][j], j, i);
+                PlayerPane.setHalignment(PlayerPaneButtons[i][j],HPos.CENTER);
+                
+                PlayerPaneButtons[i][j].setOnAction(buttonHandler);
+            }
         }
-        else if(PlayerPane.getRowIndex((Button)event.getSource()) == null)
+    }
+    
+    /**
+     * Adds all 100 button to enemyPane
+     */
+    public void addButtonEnemyPane()
+    {
+        for(int i = 0; i < ROWS; i++)
         {
-            PlayerPane.setRowIndex((Button)event.getSource(), 0);
+            for(int j = 0; j < COLUMNS; j++)
+            {
+                EnemyPaneButtons[i][j] = new Button();
+                EnemyPaneButtons[i][j].setPrefSize(39,39);
+                EnemyPaneButtons[i][j].setMinSize(39,39);
+                EnemyPaneButtons[i][j].setMaxSize(39,39);
+                EnemyPaneButtons[i][j].setStyle("-fx-background-color: #000000");
+                EnemyPane.add(EnemyPaneButtons[i][j], j, i);   
+                EnemyPane.setHalignment(EnemyPaneButtons[i][j],HPos.CENTER);
+                
+                EnemyPaneButtons[i][j].setOnAction(enemyButton);
+            }
         }
-        else if(PlayerPane.getColumnIndex((Button)event.getSource()) == null)
+    }
+    
+    public void setNullToZero(GridPane panel, ActionEvent event)
+    {
+        if(panel.getRowIndex((Button)event.getSource()) == null && panel.getColumnIndex((Button)event.getSource()) == null)
         {
-            PlayerPane.setColumnIndex((Button)event.getSource(), 0);
+            panel.setRowIndex((Button)event.getSource(), 0);
+            panel.setColumnIndex((Button)event.getSource(), 0);
         }
-        
-        int rowValue = PlayerPane.getRowIndex((Button)event.getSource());
-        int colValue = PlayerPane.getColumnIndex((Button)event.getSource());
-        
+        else if(panel.getRowIndex((Button)event.getSource()) == null)
+        {
+            panel.setRowIndex((Button)event.getSource(), 0);
+        }
+        else if(panel.getColumnIndex((Button)event.getSource()) == null)
+        {
+            panel.setColumnIndex((Button)event.getSource(), 0);
+        }
+    }
+    
+    
+    EventHandler<ActionEvent> buttonHandler = new EventHandler<ActionEvent>() {
+    @Override
+    public void handle(ActionEvent e) {
+        boolean m = true;
+        Button currButton = (Button)e.getSource();
+        if(m == false)
+        {
+            currButton.setStyle("-fx-background-color: #109856");
+        }
+        else
+        {
+            currButton.setStyle("-fx-background-color: #CD5C5C");
+        }
+    }
+};
+    
+    EventHandler<ActionEvent> enemyButton = new EventHandler<ActionEvent>() {
+    @Override
+    public void handle(ActionEvent event) {
+        EnemyBoard enemyPos = new EnemyBoard();
         Button currButton = (Button)event.getSource();
         
-        int currRow = PlayerPane.getRowIndex(currButton);
-        int currColumn = PlayerPane.getColumnIndex(currButton);
-        currButton.setStyle("-fx-background-color: #109856");
+        setNullToZero(EnemyPane, event);
+        int rowValue = PlayerPane.getRowIndex(currButton);
+        int colValue = PlayerPane.getColumnIndex(currButton);
         
-        RowField.setText(String.valueOf(rowValue));
-        ColumnField.setText(String.valueOf(colValue));
-        shipCounter++;
+        if(enemyPos.shipExist(rowValue, colValue) == true)
+        {
+            currButton.setStyle("-fx-background-color: #FF0000");
+        }
+        else
+        {
+            currButton.setText("M");
+            currButton.setStyle("-fx-background-color: #FFFF00");
+        }
     }
+};
+
+    
+    @FXML
+    private void startClick(ActionEvent event) {
+    /**
+     *
+        EnemyBoard eBoard = new EnemyBoard();
+        
+        EnemyShip Carrier = new EnemyShip(5, "Carrier");
+        EnemyShip Battleship = new EnemyShip(4, "Battleship");
+        EnemyShip Cruiser = new EnemyShip(3, "Cruiser");
+        EnemyShip Fighter = new EnemyShip(3, "Fighter");
+        EnemyShip Destroyer = new EnemyShip(2, "Destroyer");
+        
+        Carrier.placeShips(5, eBoard.getEnemyShipPlacement());
+        Battleship.placeShips(4, eBoard.getEnemyShipPlacement());
+        Cruiser.placeShips(3, eBoard.getEnemyShipPlacement());
+        Fighter.placeShips(3, eBoard.getEnemyShipPlacement());
+        Destroyer.placeShips(2, eBoard.getEnemyShipPlacement());
+     */
     }
+   
 }
+
 
