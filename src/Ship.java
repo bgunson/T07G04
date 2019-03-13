@@ -1,90 +1,82 @@
+import java.util.ArrayList;
 /*
 Ship object that can take any specified length x width size and keeps track of its number of hits which can
 tell us if it is destroyed or not at any certain point in the game.
  */
-
-
 public class Ship{
 
-    private int shipLength;
-    private int shipWidth;
-    private int numberOfHits;
-    private String shipName;
+	// Keeps track of where it is on the board
+	private ArrayList<String> coordinates;
+	
+	// Keeps track of which parts of it are destroyed
+	private ArrayList<String> destroyed;
 
+	// Keeps track of if the whole ship is destroyed
+    public boolean sunk = false;
 
+    public int shipLength;
+	public String name;
+	
+	
     /**
      * Constructor with length and width arguments.
      * @param shipLength the length of the ship.
-     * @param shipWidth the width of the ship.
-     */
-    public Ship(int shipLength, String shipName){
-
+     * @param name is the name of the ship.
+     */	
+    public Ship(int shipLength, String name){
+		
         this.shipLength = shipLength;
-        this.shipName = shipName;
-        shipWidth = 1;
-        numberOfHits = 0;
-
-    }
-    
-    /**
-    * Copy constructor.
-    */
-    public Ship(Ship shipToCopy){
-        this.shipLength = shipToCopy.getShipLength();
-        this.shipName = shipToCopy.getShipName();
-        this.shipWidth = 1;
-        this.numberOfHits = 0;
+		this.name = name;
+		coordinates = new ArrayList<String>();
+		destroyed = new ArrayList<String>();
+		
     }
 
-    public String getShipName(){
-        return this.shipName;
-    }
+	/**
+		@param newCoordinates, sets the coordinates ArrayList to this
+	*/
+	public void setCoordinates(ArrayList<String> newCoordinates){
+		
+		this.coordinates = newCoordinates;
+	}
 
-    /**
-     * Method that returns length of the ship.
-     * @return shipLength
+	/**
+		@return coordinates, returns the ArrayList of where the ship is located
+	*/
+	public ArrayList<String> getCoordinates(){
+		
+		return coordinates;
+	}
+
+	/**
+		@return destroyed, returns the ArrayList of destroyed tiles
+	*/
+	public ArrayList<String> getDestroyed(){
+		
+		return destroyed;
+	}	
+
+	/**
+     * checks if the ship got hit
      */
-    public int getShipLength(){
-        return this.shipLength;
-    }
-
+	public void checkHit( String xy ){
+		
+		for (String a : coordinates){
+			if (a.equals(xy)){
+				destroyed.add(xy);
+				checkDestroyed();
+			}
+		}
+	}
+	
     /**
-     * Method returns the width of the ship.
-     * @return shipWidth
+     * checks if the ship is destroyed
      */
-    public int getShipWidth(){
-        return this.shipWidth;
+    public void checkDestroyed(){
+		
+		System.out.println("destroyed.size(): "+destroyed.size()+" coordinates.size(): "+coordinates.size());
+		if (destroyed.size() == coordinates.size())
+			sunk = true;
     }
-
-    /**
-     * Method returns the number of hits.
-     * @return numberOfHits
-     */
-    public int getNumberOfHits(){
-        return this.numberOfHits;
-
-    }
-
-    /**
-     * Method sets the number of hits to specified integer.
-     * @param numberOfHits the new integer numberOfHits.
-     */
-    public void setNumberOfHits(int numberOfHits){
-        this.numberOfHits = numberOfHits;
-    }
-
-    /**
-     * checks if the ship has been hit the same amount that it is long.
-     * @return true if the ship has been destroyed, false otherwise.
-     */
-
-    public boolean isDestroyed(){
-        if (numberOfHits == shipLength){
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
-
+		
 }
