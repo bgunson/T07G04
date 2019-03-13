@@ -15,7 +15,7 @@ public class AiPlayer{
 	 */
 	public void shipPlacer(Board board, ShipTeam fleet){
 
-		ArrayList<Ship> theShips = fleet.getShipFleet();
+		ArrayList<Ship> theShips = fleet.getShips();
 
 		int randomX, randomY;
 		for (Ship s : theShips){
@@ -25,13 +25,11 @@ public class AiPlayer{
 				randomX = randCoords.nextInt(10);
 				randomY = randCoords.nextInt(10);
 				if (randomX % 2 == 0)
-					goodPlace = board.placeShip(randomX, randomY, s.getShipLength(), 1);
+					goodPlace = board.placeShip(randomX, randomY, s, 1);
 				else
-					goodPlace = board.placeShip(randomX, randomY, 1, s.getShipLength());
+					goodPlace = board.placeShip(randomX, randomY, s, 2);
 			}
 		}
-
-
 	}
 
     /**
