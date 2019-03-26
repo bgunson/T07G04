@@ -158,53 +158,5 @@ public class Board {
 		}
 		return false;
 	}
-
-	public boolean placeShip(int x, int y, Ship ship, int orientation){
-
-		int length = ship.shipLength;
-		int height, width;
-		if (orientation == 1){ // 1 = horizontal, 2 = vertical
-			width = length;
-			height = 1;
-		}
-		else{
-			width = 1;
-			height = length;			
-		}
-		
-		// if placing out of grid
-		if (( x + width > columns) || (y + height > rows)){ 
-			System.out.println("out of grid");
-			// Bad placement.
-			return false;
-		}
-		else{
-			// check on if ship already exists in spot
-			boolean spaceAvailable = true;
-			for(int i = x; i < (x+width); i++){
-				for(int j = y; j < (y+height); j++){
-					if (grid[i][j] != " "){
-						spaceAvailable = false;
-						return false;
-					}
-				}
-			}			
-			// places the ship in spot
-			if (spaceAvailable){
-				
-				ArrayList<String> coordinates = new ArrayList<String>(); // stores what the coordinates of the ship will be
-
-				for(int i = x; i < (x+width); i++){
-					for(int j = y; j < (y+height); j++){
-						grid[i][j] = "G";
-						coordinates.add( Character.toString((char)(i+97))+Integer.toString(j) ); // stores as "letternumber" ex: A1
-					}
-				}
-				ship.setCoordinates(coordinates); // updates the ships coordinates onces it's been places
-				return true; // Good placemnet.
-			}
-		}
-		return false;
-	}
 	
 }
