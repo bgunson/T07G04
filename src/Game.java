@@ -5,7 +5,7 @@ public class Game {
 
 	public static void start(){
 
-		System.out.println("Welcome to BattleShip Galactica!");
+		System.out.println("Welcome to BattleShip Galactica!\n");
 
 		// Create game board for player 1.
 		Board playerOneShips = new Board();
@@ -16,15 +16,20 @@ public class Game {
 		Board playerTwoShips = new Board();
 		//playerTwoShips.gridBuilder();
 		Board playerTwoHits = new Board();
-		//playerTwoHits.gridBuilder();		
+		//playerTwoHits.gridBuilder();
+		AiPlayer computer = new AiPlayer();
+		System.out.println("AI has placed its ships...");
+		ShipTeam playerTwoFleet = new ShipTeam("Player Two Fleet");
+		computer.shipPlacer(playerTwoShips, playerTwoFleet);
 
-		System.out.println("Player 1 place ships");
+		playerTwoShips.boardDisplay();
+
+		System.out.println("\nPlayer 1 place ships");
 		ShipTeam playerOneFleet = new ShipTeam("Player One Fleet");
 		playerOneFleet.placeAllShips(playerOneShips);
 
-		System.out.println("Player 2 place ships");
-		ShipTeam playerTwoFleet = new ShipTeam("Player Two Fleet");
-		playerOneFleet.placeAllShips(playerTwoShips);
+
+
 
 
 		

@@ -1,7 +1,6 @@
 import java.util.*;
 
-public class Board
-{
+public class Board {
 	private int rows = 10;
 	private int columns = 10;
 	

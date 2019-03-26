@@ -4,7 +4,11 @@ public class ShipTeam{
 
     private ArrayList<Ship> shipFleet;
 	private String name;
-	
+
+    public ArrayList<Ship> getShipFleet() {
+        return shipFleet;
+    }
+
     /**
      * Constructs a ship team with a given name for the fleet. Then adds the 5 default ships with names according
      */
@@ -14,11 +18,11 @@ public class ShipTeam{
         //amountHit = 0;
         shipFleet = new ArrayList<Ship>();
         // Add default ships with name <shipName (player fleet name)>
-        //shipFleet.add(new Ship(5, "Spacestation"));
-        //shipFleet.add(new Ship(4, "BattleShip"));
-        //shipFleet.add(new Ship(3, "Cruiser"));
+        shipFleet.add(new Ship(5, "Spacestation"));
+        shipFleet.add(new Ship(4, "BattleShip"));
+        shipFleet.add(new Ship(3, "Cruiser"));
         shipFleet.add(new Ship(3, "Destroyer"));
-        //shipFleet.add(new Ship(2, "Satellite"));
+        shipFleet.add(new Ship(2, "Satellite"));
 
 
     }
