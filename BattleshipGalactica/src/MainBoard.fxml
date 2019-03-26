@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
 
 <AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="battleshipgalactica.MainBoardController">
    <children>
@@ -42,139 +42,9 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
-                     <children>
-                        <Button fx:id="JButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" />
-                        <Button fx:id="JButton1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="1" />
-                        <Button fx:id="JButton2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="2" />
-                        <Button fx:id="JButton3" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="3" />
-                        <Button fx:id="JButton4" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="4" />
-                        <Button fx:id="JButton5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="5" />
-                        <Button fx:id="JButton6" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="6" />
-                        <Button fx:id="JButton7" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="7" />
-                        <Button fx:id="JButton8" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="8" />
-                        <Button fx:id="JButton9" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="9" />
-                        <Button fx:id="JButton11" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.rowIndex="1" />
-                        <Button fx:id="JButton12" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Button fx:id="JButton13" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <Button fx:id="JButton14" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                        <Button fx:id="JButton15" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-                        <Button fx:id="JButton16" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-                        <Button fx:id="JButton17" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-                        <Button fx:id="JButton18" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="7" GridPane.rowIndex="1" />
-                        <Button fx:id="JButton19" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="8" GridPane.rowIndex="1" />
-                        <Button fx:id="JButton20" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="9" GridPane.rowIndex="1" />
-                        <Button fx:id="JButton22" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.rowIndex="2" />
-                        <Button fx:id="JButton23" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <Button fx:id="JButton24" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                        <Button fx:id="JButton25" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                        <Button fx:id="JButton26" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-                        <Button fx:id="JButton27" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-                        <Button fx:id="JButton28" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-                        <Button fx:id="JButton29" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="7" GridPane.rowIndex="2" />
-                        <Button fx:id="JButton30" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="8" GridPane.rowIndex="2" />
-                        <Button fx:id="JButton31" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="9" GridPane.rowIndex="2" />
-                        <Button fx:id="JButton33" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.rowIndex="3" />
-                        <Button fx:id="JButton34" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <Button fx:id="JButton35" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                        <Button fx:id="JButton36" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                        <Button fx:id="JButton37" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-                        <Button fx:id="JButton38" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-                        <Button fx:id="JButton39" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-                        <Button fx:id="JButton40" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="7" GridPane.rowIndex="3" />
-                        <Button fx:id="JButton41" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="8" GridPane.rowIndex="3" />
-                        <Button fx:id="JButton42" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="9" GridPane.rowIndex="3" />
-                        <Button fx:id="JButton44" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.rowIndex="4" />
-                        <Button fx:id="JButton45" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                        <Button fx:id="JButton46" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                        <Button fx:id="JButton47" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-                        <Button fx:id="JButton48" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-                        <Button fx:id="JButton49" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="5" GridPane.rowIndex="4" />
-                        <Button fx:id="JButton50" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="6" GridPane.rowIndex="4" />
-                        <Button fx:id="JButton51" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="7" GridPane.rowIndex="4" />
-                        <Button fx:id="JButton52" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="8" GridPane.rowIndex="4" />
-                        <Button fx:id="JButton53" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="9" GridPane.rowIndex="4" />
-                        <Button fx:id="JButton55" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.rowIndex="5" />
-                        <Button fx:id="JButton56" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                        <Button fx:id="JButton57" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-                        <Button fx:id="JButton58" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-                        <Button fx:id="JButton59" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-                        <Button fx:id="JButton60" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="5" GridPane.rowIndex="5" />
-                        <Button fx:id="JButton61" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="6" GridPane.rowIndex="5" />
-                        <Button fx:id="JButton62" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="7" GridPane.rowIndex="5" />
-                        <Button fx:id="JButton63" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="8" GridPane.rowIndex="5" />
-                        <Button fx:id="JButton64" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="9" GridPane.rowIndex="5" />
-                        <Button fx:id="JButton66" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.rowIndex="6" />
-                        <Button fx:id="JButton67" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                        <Button fx:id="JButton68" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-                        <Button fx:id="JButton69" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="3" GridPane.rowIndex="6" />
-                        <Button fx:id="JButton70" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="4" GridPane.rowIndex="6" />
-                        <Button fx:id="JButton71" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="5" GridPane.rowIndex="6" />
-                        <Button fx:id="JButton72" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="6" GridPane.rowIndex="6" />
-                        <Button fx:id="JButton73" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="7" GridPane.rowIndex="6" />
-                        <Button fx:id="JButton74" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="8" GridPane.rowIndex="6" />
-                        <Button fx:id="JButton75" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="9" GridPane.rowIndex="6" />
-                        <Button fx:id="JButton77" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.rowIndex="7" />
-                        <Button fx:id="JButton78" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                        <Button fx:id="JButton79" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-                        <Button fx:id="JButton80" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="3" GridPane.rowIndex="7" />
-                        <Button fx:id="JButton81" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="4" GridPane.rowIndex="7" />
-                        <Button fx:id="JButton82" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="5" GridPane.rowIndex="7" />
-                        <Button fx:id="JButton83" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="6" GridPane.rowIndex="7" />
-                        <Button fx:id="JButton84" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="7" GridPane.rowIndex="7" />
-                        <Button fx:id="JButton85" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="8" GridPane.rowIndex="7" />
-                        <Button fx:id="JButton86" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="9" GridPane.rowIndex="7" />
-                        <Button fx:id="JButton88" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.rowIndex="8" />
-                        <Button fx:id="JButton10" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-                        <Button fx:id="JButton21" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="2" GridPane.rowIndex="8" />
-                        <Button fx:id="JButton32" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="3" GridPane.rowIndex="8" />
-                        <Button fx:id="JButton43" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="4" GridPane.rowIndex="8" />
-                        <Button fx:id="JButton54" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="5" GridPane.rowIndex="8" />
-                        <Button fx:id="JButton65" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="6" GridPane.rowIndex="8" />
-                        <Button fx:id="JButton76" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="7" GridPane.rowIndex="8" />
-                        <Button fx:id="JButton87" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="8" GridPane.rowIndex="8" />
-                        <Button fx:id="JButton89" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="9" GridPane.rowIndex="8" />
-                        <Button fx:id="JButton90" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.rowIndex="9" />
-                        <Button fx:id="JButton91" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-                        <Button fx:id="JButton92" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="2" GridPane.rowIndex="9" />
-                        <Button fx:id="JButton93" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="3" GridPane.rowIndex="9" />
-                        <Button fx:id="JButton94" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="4" GridPane.rowIndex="9" />
-                        <Button fx:id="JButton95" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="5" GridPane.rowIndex="9" />
-                        <Button fx:id="JButton96" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="6" GridPane.rowIndex="9" />
-                        <Button fx:id="JButton97" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="7" GridPane.rowIndex="9" />
-                        <Button fx:id="JButton98" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="8" GridPane.rowIndex="9" />
-                        <Button fx:id="JButton99" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ClickButton" prefHeight="40.0" prefWidth="40.0" styleClass="ButtonPaneStyle" GridPane.columnIndex="9" GridPane.rowIndex="9" />
-                     </children>
                   </GridPane>
-                  <HBox alignment="CENTER_LEFT" layoutX="45.0" layoutY="150.0" prefHeight="50.0" prefWidth="400.0" AnchorPane.rightAnchor="41.0">
-                     <children>
-                        <Button fx:id="fiveShipButton" mnemonicParsing="false" onAction="#placeShip5" text="▣▣▣▣▣" />
-                        <Button fx:id="fourShipButton" mnemonicParsing="false" onAction="#placeShip4" text="▣▣▣▣">
-                           <HBox.margin>
-                              <Insets left="10.0" />
-                           </HBox.margin>
-                        </Button>
-                        <Button fx:id="threeShip1Button" mnemonicParsing="false" onAction="#placeShip1_3" text="▣▣▣">
-                           <HBox.margin>
-                              <Insets left="10.0" />
-                           </HBox.margin>
-                        </Button>
-                        <Button fx:id="threeShip2Button" mnemonicParsing="false" onAction="#PlaceShip2_3" text="▣▣▣">
-                           <HBox.margin>
-                              <Insets left="10.0" />
-                           </HBox.margin>
-                        </Button>
-                        <Button fx:id="twoShipButton" mnemonicParsing="false" onAction="#placeShip2" text="▣▣">
-                           <HBox.margin>
-                              <Insets left="10.0" />
-                           </HBox.margin>
-                        </Button>
-                     </children>
-                  </HBox>
-                  <Button layoutX="219.0" layoutY="645.0" mnemonicParsing="false" text="Start Game" />
-                  <TextField fx:id="RowField" layoutX="295.0" layoutY="125.0" />
-                  <TextField fx:id="ColumnField" layoutX="295.0" layoutY="92.0" />
-                  <Label layoutX="257.0" layoutY="96.0" text="ROW" />
-                  <Label layoutX="232.0" layoutY="129.0" text="COLUMN" />
+                  <HBox alignment="CENTER_LEFT" layoutX="45.0" layoutY="150.0" prefHeight="50.0" prefWidth="400.0" AnchorPane.rightAnchor="41.0" />
+                  <Button fx:id="startGameButton" layoutX="219.0" layoutY="645.0" mnemonicParsing="false" onAction="#startClick" text="Start Game" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="158.0" prefWidth="110.0">
@@ -205,6 +75,20 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                   </GridPane>
+                  <Button layoutX="61.0" layoutY="70.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #FF0000;">
+                     <textFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="RED" offset="0.6391752577319587" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                  </Button>
+                  <Button layoutX="61.0" layoutY="124.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #FFFF00;" text="M" />
+                  <Label layoutX="113.0" layoutY="82.0" text="= HIT " />
+                  <Label layoutX="110.0" layoutY="136.0" text="= MISS" />
                </children>
             </AnchorPane>
         </items>

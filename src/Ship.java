@@ -4,14 +4,11 @@ Ship object that can take any specified length x width size and keeps track of i
 tell us if it is destroyed or not at any certain point in the game.
  */
 public class Ship{
-	
-	// pretty much the same but keeps track of hits
-	// so we can update board once it sinks
-	
-	
+
 	// Keeps track of where it is on the board
 	private ArrayList<String> coordinates;
-	// Keeps track of which parts of it is destroyed
+	
+	// Keeps track of which parts of it are destroyed
 	private ArrayList<String> destroyed;
 
 	// Keeps track of if the whole ship is destroyed
@@ -20,47 +17,64 @@ public class Ship{
     public int shipLength;
 	public String name;
 	
+	
+    /**
+     * Constructor with length and width arguments.
+     * @param shipLength the length of the ship.
+     * @param name is the name of the ship.
+     */	
     public Ship(int shipLength, String name){
+		
         this.shipLength = shipLength;
 		this.name = name;
-		
 		coordinates = new ArrayList<String>();
 		destroyed = new ArrayList<String>();
 		
     }
 
+	/**
+		@param newCoordinates, sets the coordinates ArrayList to this
+	*/
+	public void setCoordinates(ArrayList<String> newCoordinates){
+		
+		this.coordinates = newCoordinates;
+	}
+
+	/**
+		@return coordinates, returns the ArrayList of where the ship is located
+	*/
 	public ArrayList<String> getCoordinates(){
+		
 		return coordinates;
 	}
 
+	/**
+		@return destroyed, returns the ArrayList of destroyed tiles
+	*/
 	public ArrayList<String> getDestroyed(){
+		
 		return destroyed;
 	}	
-	
-	public void placedShip( String[] wherePlaced ){
+
+	/**
+     * checks if the ship got hit
+     */
+	public void checkHit( String xy ){
 		
-		// Update the coordinates Array with wherePlaced
-	}
-
-
-	// check the array of coordinates and see if the shot landed
-	// If landed, update destroyed, check isDestroyed and return true
-	// else return false	
-	public boolean checkHit( String xy ){
 		for (String a : coordinates){
-			if (a == xy){
-				
-				destroyed.add( xy);
-				
-				
+			if (a.equals(xy)){
+				destroyed.add(xy);
 				checkDestroyed();
-				return true;
 			}
 		}
-		return false;
 	}
 	
+    /**
+     * checks if the ship is destroyed
+     */
     public void checkDestroyed(){
+		
+		System.out.println("destroyed.size(): "+destroyed.size()+" coordinates.size(): "+coordinates.size());
 		if (destroyed.size() == coordinates.size())
 			sunk = true;
     }
