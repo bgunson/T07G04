@@ -2,7 +2,7 @@ package gui;
 
 import drivers.BattleshipGalactica;
 import handlers.BtnQuitHandler;
-import handlers.BtnStartHandler;
+import handlers.BtnReplayHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
@@ -50,11 +50,12 @@ public class EndScene extends BaseScene{
         
         BtnQuitHandler qHandler = new BtnQuitHandler();
         quit.setOnAction(qHandler);
-        
-        BtnStartHandler sHandler = new BtnStartHandler(new BattleshipGalactica());
+                
+        BtnReplayHandler sHandler = new BtnReplayHandler(getSession()); // problem here. need to make new game
         replay.setOnAction(sHandler);
 	
         setScene(new Scene(pane, 1000, 500));
         display();
+        
     }
 }
