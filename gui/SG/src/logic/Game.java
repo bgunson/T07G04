@@ -41,6 +41,10 @@ public class Game {
         return playerOneHits;
     }
     
+    public ShipTeam getAiFleet() {
+    	return aiFleet;
+    }
+    
     /**
      * Constantly gets called by the buttons until all of the ships are placed
      * @params x, y are the x y of the button which got pressed
