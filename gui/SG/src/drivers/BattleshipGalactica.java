@@ -13,7 +13,7 @@ import javafx.stage.Stage;
  * - i broke the ai and i don't know how to fix it
  * - end the game when all ships are sunk
  * - update visuals
- * - add labels to explain whats happening
+ * - add labels to explain what's happening
  */
 
 public class BattleshipGalactica extends Application{
@@ -27,6 +27,10 @@ public class BattleshipGalactica extends Application{
     
     public Game getGame(){
         return game;
+    }
+    
+    public void setGame(Game game) {
+    	this.game = game;
     }
     
     public void start(Stage stage){
