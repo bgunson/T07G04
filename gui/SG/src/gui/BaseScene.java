@@ -1,13 +1,13 @@
 package gui;
 
-import drivers.BattleshipGalatica;
+import drivers.BattleshipGalactica;
 import javafx.scene.Scene;
 
 public abstract class BaseScene {
     private Scene scene;
-    private BattleshipGalatica battleshipGalatica;
+    private BattleshipGalactica battleshipGalatica;
     
-    public BaseScene(BattleshipGalatica battleshipGalatica){
+    public BaseScene(BattleshipGalactica battleshipGalatica){
      this.battleshipGalatica = battleshipGalatica;
     }
     
@@ -15,7 +15,7 @@ public abstract class BaseScene {
         return scene;
     }
     
-    public BattleshipGalatica getSession(){
+    public BattleshipGalactica getSession(){
         return battleshipGalatica;
     }
     
@@ -23,7 +23,7 @@ public abstract class BaseScene {
         this.scene = scene;
     }
     
-    public BattleshipGalatica getSG(){
+    public BattleshipGalactica getSG(){
         return battleshipGalatica;
     }
     

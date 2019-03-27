@@ -9,21 +9,31 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.scene.control.Button;
+import javafx.scene.text.*;
 
-public class FirstScene extends BaseScene{
+public class EndScene extends BaseScene{
+	
+	private String winner;
     
-    public FirstScene(BattleshipGalactica battleshipGalatica){
+    public EndScene(BattleshipGalactica battleshipGalatica, String winner){
         super(battleshipGalatica);
+        this.winner = winner;
     }
     
     @Override
     public void setup(){
-        Button start = new Button("Start");
+        Button replay = new Button("Replay");
         Button quit = new Button("Quit");
         
+        Text winnerDisplay = new Text(winner);
+        winnerDisplay.setFont(Font.font("courier", 30));
+        winnerDisplay.setFill(Color.YELLOW);
+        
         VBox box = new VBox();
-        box.getChildren().add(start);
+        box.getChildren().add(winnerDisplay);
+        box.getChildren().add(replay);
         box.getChildren().add(quit);
         box.setAlignment(Pos.CENTER);
         
@@ -41,8 +51,8 @@ public class FirstScene extends BaseScene{
         BtnQuitHandler qHandler = new BtnQuitHandler();
         quit.setOnAction(qHandler);
         
-        BtnStartHandler sHandler = new BtnStartHandler(getSession());
-        start.setOnAction(sHandler);
+        BtnStartHandler sHandler = new BtnStartHandler(new BattleshipGalactica());
+        replay.setOnAction(sHandler);
 	
         setScene(new Scene(pane, 1000, 500));
         display();
