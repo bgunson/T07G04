@@ -1,18 +1,18 @@
 package handlers;
 
-import drivers.BattleshipGalatica;
-import gui.ThirdScene;
+import drivers.BattleshipGalactica;
+import gui.AttackScene;
 //import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 
 public class BtnPlaceShipHandler implements EventHandler<ActionEvent>{
 
-    BattleshipGalatica session;
+    BattleshipGalactica session;
     int x;
     int y;
     
-    public BtnPlaceShipHandler(BattleshipGalatica session, int x, int y){
+    public BtnPlaceShipHandler(BattleshipGalactica session, int x, int y){
         this.session = session;
         this.x = x;
         this.y = y;
@@ -24,7 +24,7 @@ public class BtnPlaceShipHandler implements EventHandler<ActionEvent>{
         session.getGame().placeNextShip(x, y);
         //session.getGame().getPlayerOneShips().boardDisplay();
         if (session.getGame().allShipsPlaced() == true){
-            ThirdScene scene = new ThirdScene(session);
+            AttackScene scene = new AttackScene(session);
             scene.setup();
         }
     }

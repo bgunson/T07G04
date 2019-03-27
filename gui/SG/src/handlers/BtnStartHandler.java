@@ -1,16 +1,16 @@
 package handlers;
 
-import drivers.BattleshipGalatica;
-import gui.SecondScene;
+import drivers.BattleshipGalactica;
+import gui.ShipPlaceScene;
 //import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 
 public class BtnStartHandler implements EventHandler<ActionEvent>{
 
-    BattleshipGalatica session;
+    BattleshipGalactica session;
     
-    public BtnStartHandler(BattleshipGalatica session){
+    public BtnStartHandler(BattleshipGalactica session){
         this.session = session;
     }
     
@@ -18,7 +18,8 @@ public class BtnStartHandler implements EventHandler<ActionEvent>{
     public void handle(ActionEvent event){
         
         // Create the second scene and set it up
-        SecondScene scene = new SecondScene(session);
+        ShipPlaceScene scene = new ShipPlaceScene(session);
         scene.setup();
+        
     }
 }
