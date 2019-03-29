@@ -8,7 +8,7 @@ import logic.Game;
 
 public class BtnReplayHandler implements EventHandler<ActionEvent>{
 
-    BattleshipGalactica session;
+    private BattleshipGalactica session;
     
     public BtnReplayHandler(BattleshipGalactica session) {
     	this.session = session;
