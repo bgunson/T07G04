@@ -4,10 +4,10 @@ import java.util.*;
 
 public class Board {
 
-    private int rows = 10;
-    private int columns = 10;
+    private final int ROWS = 10;
+    private final int COLUMNS = 10;
 
-    public String[][] grid = new String[columns][rows];
+    public String[][] grid = new String[COLUMNS][ROWS];
     /*
      * " "  = empty
      * "G" = ship part in good condition
@@ -19,8 +19,8 @@ public class Board {
     *	Sets up the initial grid
     */
     public Board(){ // just changed gridBuilder into this
-        for(int i = 0; i<rows; i++){
-            for(int j = 0; j<columns; j++)
+        for(int i = 0; i<ROWS; i++){
+            for(int j = 0; j<COLUMNS; j++)
                 grid[i][j] = " ";
             }
     }
@@ -30,11 +30,11 @@ public class Board {
     */
     public void boardDisplay(){	
         System.out.println("  A B C D E F G H I J");
-	for(int i = 0; i<columns; i++)
+	for(int i = 0; i<COLUMNS; i++)
 	{
             System.out.print(i+" ");
             
-            for(int j = 0; j<rows; j++)
+            for(int j = 0; j<ROWS; j++)
             {
 		System.out.print(grid[j][i]);
 		System.out.print(" ");
@@ -52,6 +52,7 @@ public class Board {
 
         int length = ship.shipLength;
         int height, width;
+
         if (orientation == 1){ // 1 = horizontal, 2 = vertical
             width = length;
             height = 1;
@@ -62,7 +63,7 @@ public class Board {
         }
 
         // if placing out of grid
-        if (( x + width > columns) || (y + height > rows)){ 
+        if (( x + width > COLUMNS) || (y + height > ROWS)){
             System.out.println("out of grid");
             // Bad placement.
             return false;
@@ -153,6 +154,7 @@ public class Board {
 	 * @return, true if the shot is going to hit an unmarked spot, false if not.
 	 */
 	public boolean checkShot(int x, int y){
+
 		if (grid[x][y] == " "){
 			return true;
 		}

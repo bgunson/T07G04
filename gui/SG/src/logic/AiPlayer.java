@@ -4,7 +4,8 @@ import java.util.Random;
 import java.util.ArrayList;
 
 public class AiPlayer {
-	Random rand = new Random();
+
+	private Random rand = new Random();
 	private int coordX;
 	private int coordY;
 	private boolean hitLastTurn = false;

@@ -15,6 +15,7 @@ public class Game {
     
     private int shipsPlaced = 0; // keeps track of which ship the player is on when placing
     private int orientation = 1; // keeps track of the orientation
+    private String goodPlace;
     
     // sets up game object
     public Game(){
@@ -55,8 +56,13 @@ public class Game {
         Ship someShip = playerOneFleet.getShips().get(shipsPlaced);
 
         boolean a = playerOneShips.placeShip(x, y, orientation, someShip);
-        if (a == true)
+        if (a == true){
             shipsPlaced += 1;
+            setGoodPlace(true);
+        }
+        else
+            setGoodPlace(false);
+
     }
     
     /**
@@ -165,6 +171,17 @@ public class Game {
             aiLastShot = "The AI hit your ship!";
         else
             aiLastShot = "The AI missed its shot!";
+    }
+
+    public String getGoodPlace(){
+        return goodPlace;
+    }
+
+    public void setGoodPlace(boolean good){
+        if (good)
+            goodPlace = null;
+        else
+            goodPlace = "That was an invalid ship placement. Please try again.";
     }
 
 
