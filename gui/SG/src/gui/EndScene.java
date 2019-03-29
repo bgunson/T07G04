@@ -38,7 +38,7 @@ public class EndScene extends BaseScene{
         box.setAlignment(Pos.CENTER);
         
         StackPane pane = new StackPane();
-		Image pic = new Image("https://raw.githubusercontent.com/bgunson/T07G04/master/startMenu1.png", 1000, 500, false, true);
+		Image pic = new Image("https://raw.githubusercontent.com/bgunson/T07G04/master/startMenu1.png", 800, 650, false, true);
 		ImageView imageView = new ImageView();
 		imageView.setImage(pic);
 		imageView.setLayoutX(0);
@@ -54,7 +54,7 @@ public class EndScene extends BaseScene{
         BtnReplayHandler sHandler = new BtnReplayHandler(getSession()); // problem here. need to make new game
         replay.setOnAction(sHandler);
 	
-        setScene(new Scene(pane, 1000, 500));
+        setScene(new Scene(pane, 800, 650));
         display();
         
     }
