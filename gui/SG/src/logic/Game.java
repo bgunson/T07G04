@@ -2,17 +2,18 @@ package logic;
 
 public class Game {
 
-    Board playerOneShips = new Board(); // shows the player ships
-    Board aiShips = new Board(); // shows the ai ships
-    Board playerOneHits = new Board(); // shows the player hits
-    Board aiHits = new Board(); // shows the ai hits
+    private Board playerOneShips = new Board(); // shows the player ships
+    private Board aiShips = new Board(); // shows the ai ships
+    private Board playerOneHits = new Board(); // shows the player hits
+    private Board aiHits = new Board(); // shows the ai hits
     
-    ShipTeam playerOneFleet = new ShipTeam("Player One Fleet"); // stores the ships in player's fleet
-    ShipTeam aiFleet = new ShipTeam("AI Fleet"); // stoares the ships in ai's fleet
+    private ShipTeam playerOneFleet = new ShipTeam("Player One Fleet"); // stores the ships in player's fleet
+    private ShipTeam aiFleet = new ShipTeam("AI Fleet"); // stoares the ships in ai's fleet
     
-    AiPlayer Ai = new AiPlayer(); // ai stuff
+    private AiPlayer Ai = new AiPlayer(); // ai stuff
+    private String aiLastShot;
     
-    public int shipsPlaced = 0; // keeps track of which ship the player is on when placing
+    private int shipsPlaced = 0; // keeps track of which ship the player is on when placing
     private int orientation = 1; // keeps track of the orientation
     
     // sets up game object
@@ -133,13 +134,38 @@ public class Game {
 	boolean shot = playerOneShips.shotFired(x, y);
 	aiHits.placeShot(shot, x, y);
 		
-	if (shot == true){		
+	if (shot){
             for ( Ship s : playerOneFleet.getShips() ){
                 s.checkHit( (char)(x+97)+Integer.toString(y) ); 
             }	
             System.out.println("AI's shot Hit!");
+            setAiLastShot(true);
 	}
-	else
-            System.out.println("AI's shot Missed!");        
+	else{
+        System.out.println("AI's shot Missed!");
+        setAiLastShot(false);
+
     }
+
+    }
+
+    public String getOrientation(){
+        if (orientation == 1)
+            return "HORIZONTAL";
+        else
+            return "VERTICAL";
+    }
+
+    public String getAiLastShot(){
+        return aiLastShot;
+    }
+
+    public void setAiLastShot(boolean shot){
+        if (shot)
+            aiLastShot = "The AI hit your ship!";
+        else
+            aiLastShot = "The AI missed its shot!";
+    }
+
+
 }
