@@ -22,11 +22,7 @@ public abstract class BaseScene {
     public void setScene(Scene scene){
         this.scene = scene;
     }
-    
-    public BattleshipGalactica getSG(){
-        return battleshipGalatica;
-    }
-    
+
     // Sets up the scene
     public abstract void setup();
     

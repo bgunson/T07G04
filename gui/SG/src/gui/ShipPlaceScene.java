@@ -74,6 +74,11 @@ public class ShipPlaceScene extends BaseScene {
         oText.setFont(Font.font("courier", 20));
         oText.setFill(Color.WHITE);
 
+        // Text that displays whether the last placement was valid or not... nothing if good, prompt if bad place.
+        Text placeText = new Text();
+        placeText.setFont(Font.font("courier", 16));
+        placeText.setFill(Color.RED);
+
         orientation.setPrefSize(150,30);
         orientation.setMinSize(150,30);
         orientation.setMaxSize(150,30);
@@ -82,7 +87,7 @@ public class ShipPlaceScene extends BaseScene {
 
         // VBox with orientation label and button.
         VBox oBox = new VBox();
-        oBox.getChildren().addAll(oText, orientation);
+        oBox.getChildren().addAll(oText, orientation, placeText);
         oBox.setAlignment(Pos.CENTER);
 
         root.setBottom(oBox);
@@ -100,6 +105,7 @@ public class ShipPlaceScene extends BaseScene {
                     }
                 }
                 oText.setText(getSession().getGame().getOrientation());
+                placeText.setText(getSession().getGame().getGoodPlace());
 
             }
 
