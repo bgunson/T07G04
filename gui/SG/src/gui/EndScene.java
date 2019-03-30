@@ -37,8 +37,10 @@ public class EndScene extends BaseScene{
         box.getChildren().add(quit);
         box.setAlignment(Pos.CENTER);
         
+        if(winner.equals("You lose!"))
+        {
         StackPane pane = new StackPane();
-		Image pic = new Image("https://raw.githubusercontent.com/bgunson/T07G04/master/endScene.png", 800, 650, false, true);
+		Image pic = new Image("https://raw.githubusercontent.com/bgunson/T07G04/master/endSceneLose.png", 800, 650, false, true);
 		ImageView imageView = new ImageView();
 		imageView.setImage(pic);
 		imageView.setLayoutX(0);
@@ -56,6 +58,29 @@ public class EndScene extends BaseScene{
 	
         setScene(new Scene(pane, 800, 650));
         display();
+        }
         
+        else
+        {
+         StackPane pane = new StackPane();
+		Image pic = new Image("https://raw.githubusercontent.com/bgunson/T07G04/master/endSceneWin.png", 800, 650, false, true);
+		ImageView imageView = new ImageView();
+		imageView.setImage(pic);
+		imageView.setLayoutX(0);
+		imageView.setLayoutY(0);
+		pane.getChildren().add(imageView);
+		
+        pane.getChildren().add(box);
+        pane.setAlignment(Pos.CENTER);
+        
+        BtnQuitHandler qHandler = new BtnQuitHandler();
+        quit.setOnAction(qHandler);
+                
+        BtnReplayHandler sHandler = new BtnReplayHandler(getSession()); // problem here. need to make new game
+        replay.setOnAction(sHandler);
+	
+        setScene(new Scene(pane, 800, 650));
+        display();
+        }
     }
 }
