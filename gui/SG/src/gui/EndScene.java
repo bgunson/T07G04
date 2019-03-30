@@ -38,7 +38,7 @@ public class EndScene extends BaseScene{
         box.setAlignment(Pos.CENTER);
         
         StackPane pane = new StackPane();
-		Image pic = new Image("https://raw.githubusercontent.com/bgunson/T07G04/master/startMenu1.png", 800, 650, false, true);
+		Image pic = new Image("https://raw.githubusercontent.com/bgunson/T07G04/master/endScene.png", 800, 650, false, true);
 		ImageView imageView = new ImageView();
 		imageView.setImage(pic);
 		imageView.setLayoutX(0);
