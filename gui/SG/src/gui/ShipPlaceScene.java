@@ -18,6 +18,10 @@ import javafx.animation.AnimationTimer;
 import javafx.geometry.HPos;
 import javafx.geometry.Pos;
 
+/*
+The scene which the user places their ships on. They can change the orientation and will be prompted when the
+placement is invalid.
+ */
 public class ShipPlaceScene extends BaseScene {
 
     // Stores the buttons which are used to place ships
@@ -28,6 +32,9 @@ public class ShipPlaceScene extends BaseScene {
         super(session);
     }
 
+    /**
+     * Override the parent setup method.
+     */
     @Override
     public void setup(){
 
