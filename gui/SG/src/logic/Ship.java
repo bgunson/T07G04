@@ -2,6 +2,9 @@ package logic;
 
 import java.util.ArrayList;
 
+/*
+Ship object that keeps track of the health of its pieces and stores its properties (length, name).
+ */
 public class Ship {
     // Keeps track of where it is on the board
     private ArrayList<String> coordinates;
@@ -28,22 +31,30 @@ public class Ship {
 		
     }
 
-    // @param newCoordinates, sets the coordinates ArrayList to this
+    /**
+     * Sets the ships coords to specified ones.
+     */
     public void setCoordinates(ArrayList<String> newCoordinates){
 	this.coordinates = newCoordinates;
     }
 
-    // @return coordinates, returns the ArrayList of where the ship is located
+    /**
+     * @return list of the ships current coords.
+     */
     public ArrayList<String> getCoordinates(){	
 	return coordinates;
     }
 
-    // @return destroyed, returns the ArrayList of destroyed tiles
+    /**
+     * Returns list of pieces that are destoyed.
+     */
     public ArrayList<String> getDestroyed(){		
 	return destroyed;
-    }	
-    
-    // checks if the ship got hit
+    }
+
+    /**
+     * Checks a position whether its been hit or not.
+     */
     public void checkHit( String xy ){	
 	for (String a : coordinates){
             if (a.equals(xy)){
@@ -52,8 +63,10 @@ public class Ship {
             }
 	}
     }
-	
-    // checks if the ship is destroyed
+
+    /**
+     * checks if the ship is destroyed.
+     */
     public void checkDestroyed(){
 	if (destroyed.size() == coordinates.size())
             sunk = true;
