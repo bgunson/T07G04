@@ -3,19 +3,23 @@ package logic;
 import Audio.AudioController;
 import drivers.BattleshipGalactica;
 
+/*
+The game object that handles all processes for the logic side of the game.
+ */
 public class Game {
 
+    // Initial Ship & Hit boards for th euser and the AI
     private ShipsBoard playerShips = new ShipsBoard();
     private ShipsBoard aiShips = new ShipsBoard();
     private HitsBoard playerHits = new HitsBoard();
     private HitsBoard aiHits = new HitsBoard();
-    
+    // Initial ship fleets for the user and the AI
     private ShipTeam playerFleet = new ShipTeam("Player One Fleet"); // stores the ships in player's fleet
     private ShipTeam aiFleet = new ShipTeam("AI Fleet"); // stoares the ships in ai's fleet
-    
+    // Create the AI player
     private AiPlayer Ai = new AiPlayer(); // ai stuff
     private String aiLastShot;
-    
+    // Audio
     private AudioController backgroundMusic1 = new AudioController(BattleshipGalactica.class.getResource("/Resources/Audio/BattleTheme.mp3").toExternalForm());
     private AudioController shotFired = new AudioController(BattleshipGalactica.class.getResource("/Resources/Audio/shotfired.wav").toExternalForm());
     private AudioController shotFiredEnemy = new AudioController(BattleshipGalactica.class.getResource("/Resources/Audio/shotfiredenemy.wav").toExternalForm());
@@ -139,6 +143,9 @@ public class Game {
 
     }
 
+    /**
+     * Excecutes a turn for the AI.
+     */
     public void aiTurn(){
      
         playerShips.updateBoard(playerFleet);
@@ -164,17 +171,26 @@ public class Game {
 
     }
 
+    /**
+     * @return a string message representing the current selected orientation when the user is placing their ships.
+     */
     public String getOrientation(){
         if (orientation == 1)
             return "HORIZONTAL";
         else
             return "VERTICAL";
     }
-    
+
+    /**
+     * @return string representing where the Ai last shot.
+     */
     public String getAiLastShot(){
         return aiLastShot;
     }
-    
+
+    /**
+     * Set the Ai's last shot to a specified string.
+     */
     public void setAiLastShot(boolean shot){
         if (shot) {
             aiLastShot = "The AI hit your ship!";
@@ -186,10 +202,16 @@ public class Game {
         }
     }
 
+    /**
+     * @return a string message for when the user places invalidly.
+     */
     public String getGoodPlace(){
         return goodPlace;
     }
-    
+
+    /**
+     * Sets the goodplace variable based on the user's desired placement.
+     */
     public void setGoodPlace(boolean good){
         if (good)
             goodPlace = null;
