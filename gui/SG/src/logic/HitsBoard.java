@@ -1,7 +1,13 @@
 package logic;
 
+/*
+Extension of the board object solely for the players' boards that stores their hits/misses.
+ */
 public class HitsBoard extends Board{
-    
+
+    /**
+     * Construct object via the parent class.
+     */
     public HitsBoard(){
         super();
     }
