@@ -2,8 +2,14 @@ package logic;
 
 import java.util.ArrayList;
 
+/*
+Extension of the board object for the players' ship locations.
+ */
 public class ShipsBoard extends Board{
-    
+
+    /**
+     * Constructs ship board via the parent.
+     */
     public ShipsBoard(){
         super();
     }
