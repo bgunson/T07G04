@@ -2,8 +2,12 @@ package logic;
 
 import java.util.ArrayList;
 
+/*
+Object that stores a fleet of ships for the players.
+ */
 public class ShipTeam {
 
+    // Name and list 
     private ArrayList<Ship> shipFleet;
     private String name;
 	
