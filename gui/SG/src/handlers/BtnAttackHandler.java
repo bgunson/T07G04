@@ -1,23 +1,33 @@
 package handlers;
 
-import drivers.BattleshipGalactica;
-import gui.AttackScene;
+import drivers.BattleshipGalatica;
+import gui.ThirdScene;
 //import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 
+/*
+Handler which handles events when the user is clicking to attack the opponent's board.
+ */
 public class BtnAttackHandler implements EventHandler<ActionEvent>{
 
-    BattleshipGalactica session;
+    // current session and (x, y) pos of the click.
+    BattleshipGalatica session;
     int x;
     int y;
-    
-    public BtnAttackHandler(BattleshipGalactica session, int x, int y){
+
+    /**
+     * Construct handler object with session and click position.
+     */
+    public BtnAttackHandler(BattleshipGalatica session, int x, int y){
         this.session = session;
         this.x = x;
         this.y = y;
     }
-    
+
+    /**
+     * Override the handle method; plays a round based on the click recieved.
+     */
     @Override
     public void handle(ActionEvent event){
         
