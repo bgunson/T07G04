@@ -1,5 +1,8 @@
 package logic;
 
+/*
+Abstract Board object allowing similar methods to be called via the super.
+ */
 public abstract class Board {
 
     /**

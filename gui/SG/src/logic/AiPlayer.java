@@ -17,7 +17,7 @@ public class AiPlayer {
 	static int lastTurnY;
 	static int lastHitX;
 	static int lastHitY;
-	
+
 	/**
 	 * shipPlacer will randomly place the default ships for the computer player n its own board.
 	 * @param board the board object representing the AI's ship locations.
