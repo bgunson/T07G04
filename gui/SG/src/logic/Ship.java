@@ -55,7 +55,6 @@ public class Ship {
 	
     // checks if the ship is destroyed
     public void checkDestroyed(){
-	System.out.println("destroyed.size(): "+destroyed.size()+" coordinates.size(): "+coordinates.size());
 	if (destroyed.size() == coordinates.size())
             sunk = true;
     }   

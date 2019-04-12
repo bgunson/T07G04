@@ -1,6 +1,9 @@
 package gui;
 
 
+import java.io.File;
+
+import Audio.AudioController;
 import drivers.BattleshipGalactica;
 import handlers.BtnQuitHandler;
 import handlers.BtnStartHandler;
@@ -13,12 +16,16 @@ import javafx.scene.layout.VBox;
 import javafx.scene.control.Button;
 
 public class FirstScene extends BaseScene{
-
+	private AudioController backgroundMusic;
+	
+	
     public FirstScene(BattleshipGalactica battleshipGalactica){
         super(battleshipGalactica);
     }
 
-    @Override
+
+
+	@Override
     public void setup(){
         Button start = new Button("Start");
         Button quit = new Button("Quit");
@@ -30,12 +37,14 @@ public class FirstScene extends BaseScene{
         box.setSpacing(40);
 
         StackPane pane = new StackPane();
-        Image pic = new Image("https://raw.githubusercontent.com/bgunson/T07G04/master/startMenu1.png", 800, 650, false, true);
+        Image pic = new Image("/Resources/Images/startMenu1.png", 800, 650, false, true);
         ImageView imageView = new ImageView();
         imageView.setImage(pic);
         imageView.setLayoutX(0);
         imageView.setLayoutY(0);
         pane.getChildren().add(imageView);
+      
+
 
         pane.getChildren().add(box);
         pane.setAlignment(Pos.CENTER);
@@ -48,6 +57,10 @@ public class FirstScene extends BaseScene{
 
         setScene(new Scene(pane, 800, 650));
         display();
+    }
+    public AudioController getMusic() 
+    {
+    	return this.backgroundMusic;
     }
 }
 

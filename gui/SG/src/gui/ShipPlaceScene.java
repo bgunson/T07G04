@@ -6,6 +6,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import logic.Game;
 import logic.Board;
+import Audio.AudioController;
 import drivers.BattleshipGalactica;
 import handlers.BtnPlaceShipHandler;
 import handlers.BtnSwitchOrientationHandler;
@@ -40,12 +41,16 @@ public class ShipPlaceScene extends BaseScene {
 
         // Sets up the background image
         StackPane pane = new StackPane();
-        Image pic = new Image("https://raw.githubusercontent.com/bgunson/T07G04/master/menupicture.png", 1000, 500, false, true);
+        Image pic = new Image("/Resources/Images/background1.png", 1000, 500, false, true);
         ImageView imageView = new ImageView();
         imageView.setImage(pic);
         imageView.setLayoutX(0);
         imageView.setLayoutY(0);
         pane.getChildren().add(imageView);
+        Image player = new Image(getClass().getResourceAsStream("playerShip1.png"));
+        
+		
+		//backgroundMusic.playSong();
 
         // Sets up the player buttons
         for (int i = 0; i < 10; i++){
@@ -95,22 +100,18 @@ public class ShipPlaceScene extends BaseScene {
         new AnimationTimer(){
             //VBox oBox = new VBox();
             public void handle(long now){
-                Board a = getSession().getGame().getPlayerOneShips();
+                Board a = getSession().getGame().getPlayerShips();
                 for (int i = 0; i < 10; i++){
                     for (int j = 0; j < 10; j++){
-                        if(a.grid[j][i] == "G")
-                            PlayerPaneButtons[j][i].setStyle("-fx-background-color: #109856");
+                        if(a.getGrid()[j][i].equals("G"))
+                            PlayerPaneButtons[j][i].setGraphic(new ImageView(player));
                         else
                             PlayerPaneButtons[j][i].setStyle("-fx-background-color: #000000");
                     }
                 }
                 oText.setText(getSession().getGame().getOrientation());
                 placeText.setText(getSession().getGame().getGoodPlace());
-
             }
-
-
-
         }.start();
 
         //firstRow.getChildren().add(sceneA());
