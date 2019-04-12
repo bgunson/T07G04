@@ -13,15 +13,27 @@ import javafx.scene.paint.Color;
 import javafx.scene.control.Button;
 import javafx.scene.text.*;
 
+/*
+The final scene after a game concludes, further gives the user the option to play again or quit the application.
+ */
 public class EndScene extends BaseScene{
-	
+
+    // String representing the winning message.
 	private String winner;
-    
+
+    /**
+     * Constructs the scene.
+     * @param battleshipGalatica, the current driver.
+     * @param winner, the message that syays who won the game.
+     */
     public EndScene(BattleshipGalactica battleshipGalatica, String winner){
         super(battleshipGalatica);
         this.winner = winner;
     }
-    
+
+    /**
+     * Override the parent setup method.
+     */
     @Override
     public void setup(){
         Button replay = new Button("Replay");
