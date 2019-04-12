@@ -15,16 +15,25 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.scene.control.Button;
 
+/*
+The first scene (main menu) is the first scene the user sees when the app. is run. User can start, quit or get help.
+ */
 public class FirstScene extends BaseScene{
+    // Music
 	private AudioController backgroundMusic;
-	
-	
+
+    /**
+     * Constructs a scene with the current driver.
+     * @param battleshipGalactica the session in progress.
+     */
     public FirstScene(BattleshipGalactica battleshipGalactica){
         super(battleshipGalactica);
     }
 
 
-
+    /**
+     * Override the parent setup method.
+     */
 	@Override
     public void setup(){
         Button start = new Button("Start");
@@ -58,6 +67,10 @@ public class FirstScene extends BaseScene{
         setScene(new Scene(pane, 800, 650));
         display();
     }
+
+    /**
+     * @return the music.
+     */
     public AudioController getMusic() 
     {
     	return this.backgroundMusic;
