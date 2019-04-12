@@ -3,8 +3,12 @@ package logic;
 import java.util.Random;
 import java.util.ArrayList;
 
+/*
+Our Ai object with methods that control its actions when called.
+ */
 public class AiPlayer {
 
+	// instance variables
 	private Random rand = new Random();
 	private int coordX;
 	private int coordY;
@@ -13,6 +17,7 @@ public class AiPlayer {
 	static int lastTurnY;
 	static int lastHitX;
 	static int lastHitY;
+	
 	/**
 	 * shipPlacer will randomly place the default ships for the computer player n its own board.
 	 * @param board the board object representing the AI's ship locations.
