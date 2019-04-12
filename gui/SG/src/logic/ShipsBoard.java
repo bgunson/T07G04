@@ -2,14 +2,8 @@ package logic;
 
 import java.util.ArrayList;
 
-/*
-Extension of the board object for the players' ship locations.
- */
 public class ShipsBoard extends Board{
-
-    /**
-     * Constructs ship board via the parent.
-     */
+    
     public ShipsBoard(){
         super();
     }
@@ -36,7 +30,7 @@ public class ShipsBoard extends Board{
 
         // if placing out of grid
         if (( x + width > 10) || (y + height > 10)){ 
-     
+            System.out.println("out of grid");
             // Bad placement.
             return false;
         }

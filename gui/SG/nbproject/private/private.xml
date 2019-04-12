@@ -3,8 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/taylo/OneDrive/Desktop/T07G04-master/gui/SG/src/Audio/AudioController.java</file>
-            <file>file:/C:/Users/taylo/OneDrive/Desktop/T07G04-master/gui/SG/src/logic/Game.java</file>
+            <file>file:/C:/Users/Fabian%20Aryo%20Pradipto.LAPTOP-18CJOTGB.000/Documents/NetBeansProjects/SG/src/handlers/BtnStartHandler.java</file>
+            <file>file:/C:/Users/Fabian%20Aryo%20Pradipto.LAPTOP-18CJOTGB.000/Documents/NetBeansProjects/SG/src/gui/FirstScene.java</file>
+            <file>file:/C:/Users/Fabian%20Aryo%20Pradipto.LAPTOP-18CJOTGB.000/Documents/NetBeansProjects/SG/src/gui/ShipPlaceScene.java</file>
+            <file>file:/C:/Users/Fabian%20Aryo%20Pradipto.LAPTOP-18CJOTGB.000/Documents/NetBeansProjects/SG/src/gui/AttackScene.java</file>
+            <file>file:/C:/Users/Fabian%20Aryo%20Pradipto.LAPTOP-18CJOTGB.000/Documents/NetBeansProjects/SG/src/handlers/BtnAttackHandler.java</file>
         </group>
     </open-files>
 </project-private>

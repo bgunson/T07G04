@@ -16,40 +16,30 @@ public class AudioController {
 	private Clip controller;
 	private Media media;
 	private MediaPlayer player;
-	   /**
-     	* The constructor AudioController takes in a sound files path as an argument and makes it into an object
-     	*/
 	public AudioController(String title) 
 	{
 		 try {
 
 				 media = new Media(title);
+				 //Media path = new Media( new File(title).toURI().toString());
 				 player = new MediaPlayer(media);
-				
+				//player.setAutoPlay(true);
 			   
 			  } catch (Exception e) {
 			   System.err.println(e.getMessage());
 			  }
 			 }
-	/**
-     	* playSong takes the MediaPlayer object created and plays it in a loop till stopped.
-     	*/
+	
 	public void playSong() {
 
 		player.setCycleCount(MediaPlayer.INDEFINITE);
 		player.seek(Duration.ZERO);
 		player.play();
 	}
-	   /**
-    	 * playEffect is for sound effects instead of songs, the sound is played once and that's it
-   	  */
 	public void playEffect() {
 		player.seek(Duration.ZERO);
 		player.play();
 	}
-	 /**
-    	 * stop will stop the sound from playing
-   	  */
 	public void stop() {
 		player.stop();
 		

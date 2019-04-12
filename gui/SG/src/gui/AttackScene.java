@@ -23,21 +23,12 @@ import logic.ShipTeam;
 import javafx.scene.shape.Circle;
 import java.io.*;
 
-
-/*
-AttackScene is a scene in our GUI which allows the user and AI to trade shots at eachother's boards until
-someone wins.
- */
 public class AttackScene extends BaseScene{
 
-    // Buttons for user's ship's and AI;s board to which they are clicking
     private final Button[][] playerShipsButtons = new Button[10][10];
     private final Button[][] hitButtons = new Button[10][10];
     private int frame = 0;
-
-    /**
-     * Radar animation for the opponents board.
-     */
+    
     public String individualFrames[][] = { // animates the playerHits
             {"44","45","54","55"}, // Frame 1
             {"34","35","43","53","64","65","46","56"}, // Frame 2
@@ -48,17 +39,10 @@ public class AttackScene extends BaseScene{
             {"00","90","99","09"} }; // Frame 7
 
 
-    /**
-     * Constructor which uses parent
-     * @param session, the current driver.
-     */
     public AttackScene(BattleshipGalactica session){
         super(session);
     }
 
-    /**
-     * Override the parent setup method.
-     */
     @Override
     public void setup(){
 
@@ -81,7 +65,7 @@ public class AttackScene extends BaseScene{
         pane.getChildren().add(imageView);
 
         Game a = getSession().getGame();
- 
+        a.getPlayerShips().boardDisplay();
 
         // Label that displays the ai's last shot
         Text aiTurnLabel = new Text();

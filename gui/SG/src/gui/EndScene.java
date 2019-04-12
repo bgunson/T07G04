@@ -1,5 +1,7 @@
 package gui;
 
+import java.io.File;
+
 import drivers.BattleshipGalactica;
 import handlers.BtnQuitHandler;
 import handlers.BtnReplayHandler;
@@ -13,27 +15,15 @@ import javafx.scene.paint.Color;
 import javafx.scene.control.Button;
 import javafx.scene.text.*;
 
-/*
-The final scene after a game concludes, further gives the user the option to play again or quit the application.
- */
 public class EndScene extends BaseScene{
-
-    // String representing the winning message.
+	
 	private String winner;
-
-    /**
-     * Constructs the scene.
-     * @param battleshipGalatica, the current driver.
-     * @param winner, the message that syays who won the game.
-     */
+    
     public EndScene(BattleshipGalactica battleshipGalatica, String winner){
         super(battleshipGalatica);
         this.winner = winner;
     }
-
-    /**
-     * Override the parent setup method.
-     */
+    
     @Override
     public void setup(){
         Button replay = new Button("Replay");
@@ -52,6 +42,7 @@ public class EndScene extends BaseScene{
         if(winner.equals("You lose!"))
         {
         StackPane pane = new StackPane();
+                //Image pic = new Image("/Resources/Images/endSceneLose.png", 800, 650, false, true);
 		Image pic = new Image("https://raw.githubusercontent.com/bgunson/T07G04/master/endSceneLose.png", 800, 650, false, true);
 		ImageView imageView = new ImageView();
 		imageView.setImage(pic);
@@ -75,7 +66,8 @@ public class EndScene extends BaseScene{
         else
         {
          StackPane pane = new StackPane();
-		Image pic = new Image("https://raw.githubusercontent.com/bgunson/T07G04/master/endSceneWin.png", 800, 650, false, true);
+                //Image pic = new Image("/Resources/Images/endSceneWin.png", 800, 650, false, true);	
+                Image pic = new Image("https://raw.githubusercontent.com/bgunson/T07G04/master/endSceneWin.png", 800, 650, false, true);
 		ImageView imageView = new ImageView();
 		imageView.setImage(pic);
 		imageView.setLayoutX(0);

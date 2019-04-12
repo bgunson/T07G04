@@ -1,8 +1,5 @@
 package logic;
 
-/*
-Abstract Board object allowing similar methods to be called via the super.
- */
 public abstract class Board {
 
     /**
@@ -35,5 +32,24 @@ public abstract class Board {
         return fGrid;
     }
     
+    /**
+     * Text display in console for debugging
+     */
+    public void boardDisplay(){	
+        System.out.println("  A B C D E F G H I J");
+	for(int i = 0; i<10; i++)
+	{
+            System.out.print(i+" ");
+            
+            for(int j = 0; j<10; j++)
+            {
+                System.out.print(grid[j][i]);
+                System.out.print(" ");
+            }
+        System.out.println();
+	}
+    }
 
+    //public abstract void placeShip();
+    
 }
