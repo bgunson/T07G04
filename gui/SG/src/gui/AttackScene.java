@@ -44,6 +44,9 @@ public class AttackScene extends BaseScene{
     }
 
     @Override
+    /**
+     *  initializes all the componenets required for the scene to work
+     */
     public void setup(){
 
         BorderPane root = new BorderPane();
@@ -113,6 +116,7 @@ public class AttackScene extends BaseScene{
         
         
         new AnimationTimer(){
+            //Timer for the animations
             public void handle(long now){
                 
                 // Animates enemy radar
