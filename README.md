@@ -7,6 +7,8 @@ April 12, 2019
 
 Gui version of the game is complete, the files are in the repository to view and you can easily run the game using the jar file also on the first page of the repository.
 
+Also note, the uml diagram includes a section about game saving, due to major errors that we couldn't fix over the course of the week we ended up removing it for a completely bug free final product.
+
 
 March 12, 2019
 
