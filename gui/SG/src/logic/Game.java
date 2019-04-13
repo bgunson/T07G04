@@ -16,7 +16,7 @@ public class Game {
     private AiPlayer Ai = new AiPlayer(); // ai stuff
     private String aiLastShot;
     
-    private AudioController backgroundMusic1 = new AudioController(BattleshipGalactica.class.getResource("/Resources/Audio/spiderman.mp3").toExternalForm());
+    private AudioController backgroundMusic1 = new AudioController(BattleshipGalactica.class.getResource("/Resources/Audio/BattleTheme.mp3").toExternalForm());
     private AudioController shotFired = new AudioController(BattleshipGalactica.class.getResource("/Resources/Audio/shotfired.wav").toExternalForm());
     private AudioController shotFiredEnemy = new AudioController(BattleshipGalactica.class.getResource("/Resources/Audio/shotfiredenemy.wav").toExternalForm());
     
