@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 public class BattleshipGalactica extends Application{
     Stage stage;
     Game game = new Game();
-    private AudioController backgroundMusic = new AudioController(BattleshipGalactica.class.getResource("/Resources/Audio/thing.wav").toExternalForm());
+    private AudioController backgroundMusic = new AudioController(BattleshipGalactica.class.getResource("/Resources/Audio/MainMenu.mp3").toExternalForm());
     
 	
       /**
