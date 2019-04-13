@@ -31,7 +31,9 @@ public class Game {
     public Game(){
         Ai.shipPlacer(aiShips, aiFleet);
     }
-    
+      /**
+     * When this is called  it will start playing the background music
+     */
     public void startMusic() 
     {
     	backgroundMusic1.stop();
@@ -147,6 +149,9 @@ public class Game {
             System.out.println("Player's shot Missed!");
     }
 
+	    /**
+     * When it's the ai's turn to play this method is run
+     */
     public void aiTurn(){
      
         playerShips.updateBoard(playerFleet);
@@ -176,6 +181,9 @@ public class Game {
         }
     }
 
+     /**
+     *  This is used for the gui to display whether you are placing vertically or horizonally for the ships
+     */
     public String getOrientation(){
         if (orientation == 1)
             return "HORIZONTAL";
@@ -186,22 +194,29 @@ public class Game {
     public String getAiLastShot(){
         return aiLastShot;
     }
-    
+        /**
+     *  The ai's last shot is recorded
+     */
     public void setAiLastShot(boolean shot){
         if (shot) {
             aiLastShot = "The AI hit your ship!";
-        	AiPlayer.hitLastTurn = true;
+        	
         	}
         else {
             aiLastShot = "The AI missed its shot!";
-            AiPlayer.hitLastTurn = false;
+            
         }
     }
 
+      /**
+     * returns good place
+     */
     public String getGoodPlace(){
         return goodPlace;
     }
-    
+     /**
+     * sets good place
+     */
     public void setGoodPlace(boolean good){
         if (good)
             goodPlace = null;
