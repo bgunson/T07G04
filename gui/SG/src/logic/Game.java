@@ -161,8 +161,7 @@ public class Game {
 	Ai.turn(aiHits);
 	int x = Ai.getCoordX();
 	int y = Ai.getCoordY();
-	AiPlayer.lastTurnX = x;
-	AiPlayer.lastTurnY = y;
+
 	
 	boolean shot = playerShips.shotFired(x, y);
 	aiHits.placeShot(shot, x, y);
