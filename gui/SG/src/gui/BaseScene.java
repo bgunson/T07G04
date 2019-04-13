@@ -10,17 +10,19 @@ public abstract class BaseScene {
     public BaseScene(BattleshipGalactica battleshipGalatica){
      this.battleshipGalatica = battleshipGalatica;
     }
-    
+    //Returns scene
     public Scene getScene(){
     	
         return scene;
     }
-    
+    //returns the battleshipgGalactica session
     public BattleshipGalactica getSession(){
     	
         return battleshipGalatica;
     }
-    
+     /**
+     * @param takes a scene as a parameter and sets the scene to that
+     */
     public void setScene(Scene scene){
     	
         this.scene = scene;
