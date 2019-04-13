@@ -3,6 +3,11 @@ Group Project
 
 Battleship Galactica
 
+April 12, 2019
+
+Gui version of the game is complete, the files are in the repository to view and you can easily run the game using the jar file also on the first page of the repository.
+
+
 March 12, 2019
 
 Text based version completed.
