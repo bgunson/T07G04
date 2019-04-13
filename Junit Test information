@@ -1,3 +1,2 @@
-In order to run the junit tests, put the 4 files located inside the gui's src and move them into the correct folder, which 
-is the logic folder. After that go into command promp and change the directory to that of logic and run the tests, which test both the
-board and ship classes for errors.
+In order to run the junit tests, go into command promp and change the directory to that of gui, SG and then src and 
+compile then run the tests, which test both the board and ship classes for errors.
