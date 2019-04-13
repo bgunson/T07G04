@@ -16,30 +16,41 @@ public class AudioController {
 	private Clip controller;
 	private Media media;
 	private MediaPlayer player;
+	
+	 /**
+    	 *  AudioController takes a string of the audiofiles path then makes it an object
+    	 */
 	public AudioController(String title) 
 	{
 		 try {
 
 				 media = new Media(title);
-				 //Media path = new Media( new File(title).toURI().toString());
 				 player = new MediaPlayer(media);
-				//player.setAutoPlay(true);
+			
 			   
 			  } catch (Exception e) {
 			   System.err.println(e.getMessage());
 			  }
 			 }
-	
+	 /**
+     	*  Play song starts playing whatever song the object is set to
+     	*/
 	public void playSong() {
 
 		player.setCycleCount(MediaPlayer.INDEFINITE);
 		player.seek(Duration.ZERO);
 		player.play();
 	}
+	 /**
+    	 *  Plays an effect once
+    	 */
 	public void playEffect() {
 		player.seek(Duration.ZERO);
 		player.play();
 	}
+	 /**
+    	 * Stops the song or effect being played
+     	*/
 	public void stop() {
 		player.stop();
 		
