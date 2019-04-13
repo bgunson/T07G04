@@ -11,7 +11,11 @@ public class BtnPlaceShipHandler implements EventHandler<ActionEvent>{
     BattleshipGalactica session;
     int x;
     int y;
-    
+     /**
+     * @param session retrieves the session
+     * @param x retrieves the current x coordinate
+     * @param y retrieves the current y coordinate
+     */
     public BtnPlaceShipHandler(BattleshipGalactica session, int x, int y){
         this.session = session;
         this.x = x;
@@ -19,6 +23,9 @@ public class BtnPlaceShipHandler implements EventHandler<ActionEvent>{
     }
     
     @Override
+            /**
+     *  Places ship using the given coorindates
+     */
     public void handle(ActionEvent event){
         
         session.getGame().placeNextShip(x, y);
