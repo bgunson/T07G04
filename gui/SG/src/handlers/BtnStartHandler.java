@@ -18,6 +18,9 @@ public class BtnStartHandler implements EventHandler<ActionEvent>{
     }
     
     @Override
+     /**
+     *  Starts the game after being clicked
+     */
     public void handle(ActionEvent event){
     	Game startMusic = new Game();
     	startMusic.startMusic();
