@@ -15,6 +15,7 @@ public class BtnReplayHandler implements EventHandler<ActionEvent>{
     }
     
     @Override
+	//Starts a new game after the current game is completed
     public void handle(ActionEvent event){
     	
 		session.setGame(new Game());
